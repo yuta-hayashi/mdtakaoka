@@ -1,6 +1,9 @@
 .container{
     padding-top:6em;
 }
+a:hover {
+  text-decoration: none !important;
+}
 @media (max-width: 400px) {
     .container {
       padding-bottom: 4em;

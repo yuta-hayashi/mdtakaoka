@@ -1,6 +1,8 @@
 <template>
   <div id="navigation">
-    <h1 id="title">MissionDay 高岡</h1>
+    <nuxt-link to="/">
+      <h1 id="title">MissionDay 高岡</h1>
+    </nuxt-link>
     <div id="navigations">
       <nuxt-link to="/" class="navBotton home" exact-active-class="active">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -76,9 +78,7 @@
 span {
   padding: 5px;
 }
-a:hover{
-  text-decoration: none;
-}
+
 @media (max-width: 400px) {
   #title {
     display: none;
