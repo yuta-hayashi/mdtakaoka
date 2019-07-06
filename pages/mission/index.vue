@@ -1,3 +1,5 @@
 <template>
-    <h1>mission page</h1>
+    <div class="container">
+        <h1>mission page</h1>
+    </div>
 </template>
