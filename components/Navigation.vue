@@ -46,7 +46,7 @@
 ​
 <style>
 #title {
-  font-size: 2em;
+  font-size: 180%;
   margin: 0;
 }
 #navigation {
@@ -79,7 +79,7 @@ span {
   padding: 5px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 740px) {
   #title {
     display: none;
   }
