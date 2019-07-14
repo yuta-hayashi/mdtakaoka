@@ -1,7 +1,6 @@
 <template>
   <div class="card-list">
     <card
-      class="card"
       v-for="post in posts"
       :title="post.fields.title"
       :cover="post.fields.cover.fields.file.url"
@@ -25,3 +24,11 @@ export default {
   }
 };
 </script>
+
+<style>
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+</style>

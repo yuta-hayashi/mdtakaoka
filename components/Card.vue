@@ -1,5 +1,5 @@
 <template>
-  <d-card style="max-width: 500px">
+  <d-card>
     <d-card-img :src="cover" top />
     <d-card-body :title="title">
       <p>{{category}}</p>
@@ -35,5 +35,6 @@ export default {
 <style>
 .card {
   margin: 30px;
+  max-width: 450px;
 }
 </style>

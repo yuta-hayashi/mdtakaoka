@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content">
     <h1>help page</h1>
     <p>hoge</p>
     <h1>help page</h1>
