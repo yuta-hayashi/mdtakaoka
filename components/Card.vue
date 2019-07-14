@@ -3,7 +3,9 @@
     <d-card-img :src="cover" top />
     <d-card-body :title="title">
       <p>{{category}}</p>
-      <d-btn theme="primary">Read more &rarr;</d-btn>
+      <n-link :to="postUrl">
+        <d-btn theme="primary">Read more &rarr;</d-btn>
+      </n-link>
     </d-card-body>
     <d-card-footer>{{date}}</d-card-footer>
   </d-card>
@@ -27,6 +29,11 @@ export default {
     date: {
       type: String,
       required: true
+    },
+  },
+  computed:{
+    postUrl:function(){
+      return "/spot/"+this.title
     }
   }
 };
