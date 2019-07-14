@@ -30,10 +30,14 @@ export default {
       type: String,
       required: true
     },
+    id:{
+      type:String,
+      required:true
+    }
   },
   computed:{
     postUrl:function(){
-      return "/spot/"+this.title
+      return "/spot/"+this.id
     }
   }
 };
