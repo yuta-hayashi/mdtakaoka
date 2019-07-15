@@ -1,2 +1,3 @@
 [[redirects]]
-/spot/* /post/index.html
+from = "/spot/*"
+to = "/spot/index.html"
