@@ -11,7 +11,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'MissionDay 高岡 特設サイト',
     htmlAttrs: {
       lang: 'ja'
     },
@@ -69,7 +69,7 @@ export default {
     CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID
   },
   generate: {
-    fallback:true,
+    fallback: true,
     routes() {
       return cdaClient
         .getEntries(process.env.CTF_BLOG_POST_TYPE_ID)

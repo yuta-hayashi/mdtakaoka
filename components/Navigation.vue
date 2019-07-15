@@ -69,8 +69,10 @@
   fill: gray;
 }
 .active {
-  background-color: #17c671;
+  background-image: linear-gradient(45deg, #4facfe 0%, #3fc35f 100%);
+  border-radius: 25px;
   fill: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 }
 .active span {
   color: white;
@@ -97,6 +99,7 @@ span {
     display: flex;
     text-align: center;
     padding: 0;
+    margin-bottom:3px;
   }
   span {
     padding: 0;
