@@ -69,6 +69,7 @@ export default {
     CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID
   },
   generate: {
+    fallback:true,
     routes() {
       return cdaClient
         .getEntries(process.env.CTF_BLOG_POST_TYPE_ID)
