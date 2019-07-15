@@ -3,7 +3,7 @@
     <h1 hidden>MissionDay 高岡 特設サイト</h1>
     <div id="top" class="bg-back">
       <img src="~/assets/img/logo2.svg" id="logo2" />
-      <h2>北陸初となるMissonDayが富山県高岡市で開催決定！</h2>
+      <h2 class="subtitle">北陸初となるMissonDayが富山県高岡市で開催決定！</h2>
     </div>
     <div id="about">
       <img src="~/assets/img/map.jpg" id="map" />
@@ -31,7 +31,7 @@
   max-width: 800px;
   margin-bottom: 2em;
 }
-h2 {
+.subtitle {
   color: white;
   font-size: 1.5em;
 }

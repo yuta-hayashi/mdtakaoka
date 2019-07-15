@@ -1,6 +1,9 @@
 <template>
   <div class="content">
-    <h1>spot page</h1>
+    <div id="top-text">
+      <h2>おすすめスポット</h2>
+      <p>地元のお店や見所などを紹介していきます。</p>
+    </div>
     <card-list :posts="posts"></card-list>
   </div>
 </template>

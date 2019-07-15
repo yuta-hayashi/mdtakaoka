@@ -1,7 +1,7 @@
 <template>
   <div class="content">
-    <h1>{{title}}</h1>
-    <div v-html="post"></div>
+    <h1 class="title">{{title}}</h1>
+    <div v-html="post" class="post"></div>
   </div>
 </template>
 
@@ -10,7 +10,6 @@ import { createClient } from "~/plugins/contentful.js";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 const client = createClient();
-
 
 export default {
   props: {
@@ -35,3 +34,12 @@ export default {
   }
 };
 </script>
+
+<style>
+.title{
+  padding: 10px;
+}
+.post {
+  margin: 0 5%;
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div id="top-text">
-      <h2>ミッションデイ一覧</h2>
+      <h2>ミッション一覧</h2>
       <p>それぞれのミッションの地図や詳細を掲載しています。</p>
     </div>
     <div>
