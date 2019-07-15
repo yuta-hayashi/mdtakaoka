@@ -1,5 +1,9 @@
 
 require('dotenv').config()
+import axios from 'axios'
+
+const { createClient } = require('./plugins/contentful')
+const cdaClient = createClient()
 
 export default {
   mode: 'spa',
@@ -64,9 +68,13 @@ export default {
     CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
     CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID
   },
-  generate:{
-    routes:[
-      '/error'
-    ]
-  }
+  generate: {
+    routes() {
+      return cdaClient
+        .getEntries(process.env.CTF_BLOG_POST_TYPE_ID)
+        .then(entries => {
+          return [...entries.items.map(entry => `/spot/${entry.sys.id}`)]
+        })
+    }
+  },
 }
