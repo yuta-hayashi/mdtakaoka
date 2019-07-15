@@ -17,6 +17,7 @@
   background-color: #f3f3f3;
 }
 .footer {
+  margin-top: 3em;
   padding: 10px;
   text-align: center;
 }
