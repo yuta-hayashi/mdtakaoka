@@ -47,6 +47,11 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
   ],
+  manifest: {
+    name: 'MD高岡 情報サイト',
+    short_name:"MD高岡.info",
+    lang: 'ja'
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
