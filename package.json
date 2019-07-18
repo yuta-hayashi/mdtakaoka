@@ -15,6 +15,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^2.6.0",
     "contentful": "^7.8.1",
+    "contentful-management": "^5.9.0",
     "dotenv": "^8.0.0",
     "nuxt": "^2.0.0",
     "shards-vue": "^1.0.7"
