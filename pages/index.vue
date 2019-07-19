@@ -21,7 +21,7 @@
       <img src="~/assets/img/daibutsu.jpg" />
     </div>
     <div class="info">
-      <h2>最新情報を更新中⚡</h2>
+      <h4>最新情報を更新中⚡</h4>
       <p>
         このサイトではミッション情報や観光スポットなどを掲載していきます。
         <br />また、TwitterやTelegramを通じて最新情報をお届けしています！ぜひご活用ください。
@@ -76,16 +76,18 @@
   max-width: 550px;
   padding: 1em;
 }
-.info h2 {
+.info h4 {
   font-weight: bold;
   padding: 1em;
 }
 .info {
   text-align: center;
+  margin:2em;
 }
 .info-btn {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .info-btn a {
   text-decoration: none;
@@ -93,6 +95,7 @@
   font-weight: bold;
   padding: 0.8em;
   margin: 1em;
+  width: 10em;
 }
 
 #daibutsu img {
@@ -105,7 +108,7 @@
     justify-content: center;
   }
   .f-content {
-    max-width: 80%;
+    max-width: 100%;
   }
 }
 </style>
