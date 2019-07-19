@@ -4,7 +4,7 @@
       <h2>ミッション一覧</h2>
       <p>それぞれのミッションの地図や詳細を掲載しています。</p>
     </div>
-    <div>
+    <div class="cards">
       <d-card>
         <d-card-img src="https://tools.arashichang.com/300x200/cccccc/ffffff.png" top />
         <d-card-body title="ミッション1">
@@ -31,3 +31,11 @@
     </div>
   </div>
 </template>
+
+<style>
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+</style>
