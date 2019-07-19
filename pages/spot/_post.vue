@@ -8,8 +8,19 @@
 <script>
 import { createClient } from "~/plugins/contentful.js";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
 
 const client = createClient();
+const options = {
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: ({
+      data: {
+        target: { fields }
+      }
+    }) =>
+      `<img src="${fields.file.url}" alt="${fields.description}" class="post-img"/>`
+  }
+};
 
 export default {
   props: {
@@ -27,7 +38,7 @@ export default {
         console.log(entrie.fields.article);
         return {
           title: entrie.fields.title,
-          post: documentToHtmlString(entrie.fields.article)
+          post: documentToHtmlString(entrie.fields.article, options)
         };
       })
       .catch(console.error);
@@ -36,10 +47,14 @@ export default {
 </script>
 
 <style>
-.title{
+.title {
   padding: 10px;
 }
 .post {
   margin: 0 5%;
+}
+.post-img{
+  width:80%;
+  max-width: 800px;
 }
 </style>
