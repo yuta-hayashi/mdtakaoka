@@ -18,6 +18,7 @@
     "contentful-management": "^5.9.0",
     "dotenv": "^8.0.0",
     "nuxt": "^2.0.0",
+    "qrcode.vue": "^1.6.2",
     "shards-vue": "^1.0.7"
   },
   "devDependencies": {
