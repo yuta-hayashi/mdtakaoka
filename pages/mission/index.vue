@@ -4,7 +4,7 @@
       <h2>ミッション一覧</h2>
       <p>それぞれのミッションの地図や詳細を掲載しています。</p>
     </div>
-    <card-list :posts="posts"></card-list>
+    <card-list :posts="posts" :page="page"></card-list>
   </div>
 </template>
 
@@ -32,7 +32,8 @@ export default {
         // in the template
         console.log(posts.items);
         return {
-          posts: posts.items
+          posts: posts.items,
+          page: "mission"
         };
       })
       .catch(console.error);

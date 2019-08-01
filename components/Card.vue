@@ -25,6 +25,10 @@ export default {
       type: String,
       required: false
     },
+    page:{
+      type: String,
+      required:true
+    },
     id: {
       type: String,
       required: true
@@ -32,7 +36,7 @@ export default {
   },
   computed: {
     postUrl: function() {
-      return "/spot/" + this.id;
+      return "/"+this.page+"/" + this.id;
     }
   }
 };

@@ -4,7 +4,7 @@
       <h2>おすすめスポット</h2>
       <p>地元のお店や見所などを紹介していきます。</p>
     </div>
-    <card-list :posts="posts"></card-list>
+    <card-list :posts="posts" :page="page"></card-list>
   </div>
 </template>
 
@@ -32,7 +32,8 @@ export default {
         // in the template
         console.log(posts.items);
         return {
-          posts: posts.items
+          posts: posts.items,
+          page: "spot"
         };
       })
       .catch(console.error);

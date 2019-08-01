@@ -49,7 +49,7 @@ export default {
   ],
   manifest: {
     name: 'MD高岡 情報サイト',
-    short_name:"MD高岡.info",
+    short_name: "MD高岡.info",
     lang: 'ja'
   },
   /*
@@ -75,11 +75,17 @@ export default {
   generate: {
     fallback: true,
     routes() {
-      return cdaClient
-        .getEntries('post')
+      let postRoute = cdaClient.getEntries({ content_type: 'post' })
         .then(entries => {
           return [...entries.items.map(entry => `/spot/${entry.sys.id}`)]
-        })
+        });
+      let missionRoute = cdaClient.getEntries({ content_type: 'mission' })
+        .then(entries => {
+          return [...entries.items.map(entry => `/mission/${entry.sys.id}`)]
+        });
+      return Promise.all([postRoute, missionRoute]).then(values => {
+        return values.join().split(',');
+      })
     }
   },
 }
