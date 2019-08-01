@@ -5,7 +5,6 @@
       :title="post.fields.title"
       :cover="post.fields.cover.fields.file.url"
       :category="post.fields.category"
-      :date="post.sys.updatedAt"
       :id="post.sys.id"
       :key="post.sys.id"
     ></card>
