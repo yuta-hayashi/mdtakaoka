@@ -1,13 +1,12 @@
 <template>
   <d-card>
-    <d-card-img :src="cover" top />
+    <d-card-img :src="cover+'?fit=thumb&f=top&h=230&w=400'" top />
     <d-card-body :title="title">
-      <p>{{category}}</p>
       <n-link :to="postUrl">
-        <d-btn theme="primary">Read more &rarr;</d-btn>
+        <d-btn theme="primary">続きを読む &rarr;</d-btn>
       </n-link>
     </d-card-body>
-    <d-card-footer>{{date}}</d-card-footer>
+    <d-card-footer v-if="category">{{category}}</d-card-footer>
   </d-card>
 </template>
 
@@ -24,20 +23,20 @@ export default {
     },
     category: {
       type: String,
-      required: true
+      required: false
     },
-    date: {
+    page:{
+      type: String,
+      required:true
+    },
+    id: {
       type: String,
       required: true
-    },
-    id:{
-      type:String,
-      required:true
     }
   },
-  computed:{
-    postUrl:function(){
-      return "/spot/"+this.id
+  computed: {
+    postUrl: function() {
+      return "/"+this.page+"/" + this.id;
     }
   }
 };

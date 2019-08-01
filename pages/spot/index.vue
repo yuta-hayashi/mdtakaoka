@@ -4,7 +4,7 @@
       <h2>おすすめスポット</h2>
       <p>地元のお店や見所などを紹介していきます。</p>
     </div>
-    <card-list :posts="posts"></card-list>
+    <card-list :posts="posts" :page="page"></card-list>
   </div>
 </template>
 
@@ -21,13 +21,9 @@ export default {
   },
   async asyncData({ env }) {
     return Promise.all([
-      // fetch the owner of the blog
-      client.getEntries({
-        "sys.id": env.CTF_PERSON_ID
-      }),
       // fetch all blog posts sorted by creation date
       client.getEntries({
-        content_type: env.CTF_BLOG_POST_TYPE_ID,
+        content_type: "post",
         order: "-sys.updatedAt"
       })
     ])
@@ -36,7 +32,8 @@ export default {
         // in the template
         console.log(posts.items);
         return {
-          posts: posts.items
+          posts: posts.items,
+          page: "spot"
         };
       })
       .catch(console.error);

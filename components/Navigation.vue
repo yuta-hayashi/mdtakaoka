@@ -48,9 +48,11 @@
 #title {
   font-size: 180%;
   margin: 0;
+  font-weight: bold;
+  color: #616161;
 }
 #navigation {
-  background-color: aliceblue;
+  background-color: rgba(245,245,245 ,.90);
   padding: 1em;
   position: fixed;
   margin: 0 0 0 auto;
