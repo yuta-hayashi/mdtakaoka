@@ -21,10 +21,6 @@ export default {
   },
   async asyncData({ env }) {
     return Promise.all([
-      // fetch the owner of the blog
-      client.getEntries({
-        "sys.id": env.CTF_PERSON_ID
-      }),
       // fetch all blog posts sorted by creation date
       client.getEntries({
         content_type: "post",

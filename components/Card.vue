@@ -6,7 +6,7 @@
         <d-btn theme="primary">続きを読む &rarr;</d-btn>
       </n-link>
     </d-card-body>
-    <d-card-footer>{{category}}</d-card-footer>
+    <d-card-footer v-if="category">{{category}}</d-card-footer>
   </d-card>
 </template>
 
@@ -23,7 +23,7 @@ export default {
     },
     category: {
       type: String,
-      required: true
+      required: false
     },
     id: {
       type: String,
