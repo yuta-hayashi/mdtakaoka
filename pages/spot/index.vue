@@ -27,7 +27,7 @@ export default {
       }),
       // fetch all blog posts sorted by creation date
       client.getEntries({
-        content_type: env.CTF_BLOG_POST_TYPE_ID,
+        content_type: "post",
         order: "-sys.updatedAt"
       })
     ])

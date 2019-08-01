@@ -71,13 +71,12 @@ export default {
   env: {
     CTF_SPACE_ID: process.env.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
-    CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID
   },
   generate: {
     fallback: true,
     routes() {
       return cdaClient
-        .getEntries(process.env.CTF_BLOG_POST_TYPE_ID)
+        .getEntries('post')
         .then(entries => {
           return [...entries.items.map(entry => `/spot/${entry.sys.id}`)]
         })
