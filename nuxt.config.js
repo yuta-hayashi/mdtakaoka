@@ -83,7 +83,8 @@ export default {
         .then(entries => {
           return [...entries.items.map(entry => `/mission/${entry.sys.id}`)]
         });
-      return Promise.all([postRoute, missionRoute]).then(values => {
+      let error='/error';
+      return Promise.all([postRoute, missionRoute, error]).then(values => {
         return values.join().split(',');
       })
     }
