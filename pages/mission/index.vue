@@ -4,38 +4,38 @@
       <h2>ミッション一覧</h2>
       <p>それぞれのミッションの地図や詳細を掲載しています。</p>
     </div>
-    <div class="cards">
-      <d-card>
-        <d-card-img src="https://tools.arashichang.com/300x200/cccccc/ffffff.png" top />
-        <d-card-body title="ミッション1">
-          <p>ミッションについて...</p>
-          <d-btn>Read more &rarr;</d-btn>
-        </d-card-body>
-      </d-card>
-
-      <d-card>
-        <d-card-img src="https://tools.arashichang.com/300x200/cccccc/ffffff.png" top />
-        <d-card-body title="ミッション2">
-          <p>ミッションについて...</p>
-          <d-btn>Read more &rarr;</d-btn>
-        </d-card-body>
-      </d-card>
-
-      <d-card>
-        <d-card-img src="https://tools.arashichang.com/300x200/cccccc/ffffff.png" top />
-        <d-card-body title="ミッション3">
-          <p>ミッションについて...</p>
-          <d-btn>Read more &rarr;</d-btn>
-        </d-card-body>
-      </d-card>
-    </div>
+    <card-list :posts="posts"></card-list>
   </div>
 </template>
 
-<style>
-.cards{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-</style>
+<script>
+import CardList from "~/components/CardList.vue";
+
+import { createClient } from "~/plugins/contentful.js";
+
+const client = createClient();
+
+export default {
+  components: {
+    CardList
+  },
+  async asyncData({ env }) {
+    return Promise.all([
+      // fetch all blog posts sorted by creation date
+      client.getEntries({
+        content_type: "mission",
+        order: "-sys.updatedAt"
+      })
+    ])
+      .then(([posts]) => {
+        // return data that should be available
+        // in the template
+        console.log(posts.items);
+        return {
+          posts: posts.items
+        };
+      })
+      .catch(console.error);
+  }
+};
+</script>
