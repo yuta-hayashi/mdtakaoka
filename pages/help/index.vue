@@ -4,75 +4,81 @@
       <h2>ヘルプ</h2>
       <p>よくある質問と答えを掲載しています。</p>
     </div>
-    <div>
-      <d-card class="mb-1">
-        <d-card-header class="px-3 py-2" role="tab">
-          <d-btn
-            block-level
-            size="small"
-            theme="secondary"
-            href="#"
-            v-d-toggle.accordion1
-          >県外から高岡市への移動時間の目安</d-btn>
-        </d-card-header>
-        <d-collapse id="accordion1" visible accordion="my-accordion" role="tabpanel">
-          <d-card-body>
-            <p class="card-text">主要都市からの目安時間は以下のようになります。</p>
-            <p>
-              東京： 車で約５時間半・新幹線で最速２時間２１分
-              <br />大阪： 車で約４時間半・電車で約３時間
-              <br />名古屋： 車で約３時間半・電車で約３時間
-            </p>
-          </d-card-body>
-        </d-collapse>
-      </d-card>
-
-      <d-card class="mb-1">
-        <d-card-header class="px-3 py-2" role="tab">
-          <d-btn
-            block-level
-            size="small"
-            theme="secondary"
-            href="#"
-            v-d-toggle.accordion2
-          >参加方法は？</d-btn>
-        </d-card-header>
-        <d-collapse id="accordion2" accordion="my-accordion" role="tabpanel">
-          <d-card-body>
-            <p
-              class="card-text"
-            >近日公開予定</p>
-          </d-card-body>
-        </d-collapse>
-      </d-card>
-
-      <d-card class="mb-1">
-        <d-card-header class="px-3 py-2" role="tab">
-          <d-btn
-            block-level
-            size="small"
-            theme="secondary"
-            href="#"
-            v-d-toggle.accordion3
-          >質問３</d-btn>
-        </d-card-header>
-        <d-collapse id="accordion3" accordion="my-accordion" role="tabpanel">
-          <d-card-body>
-            <p
-              class="card-text"
-            >回答。。。。</p>
-          </d-card-body>
-        </d-collapse>
+    <div class="card-list">
+      <d-card v-for="item in posts" :key="item.sys.id" class="card">
+        <d-card-header class="card-title">{{item.fields.title}}</d-card-header>
+        <d-card-body>
+          <div v-html="item.fields.content" class="post"></div>
+        </d-card-body>
       </d-card>
     </div>
   </div>
 </template>
 
+<script>
+import { createClient } from "~/plugins/contentful.js";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+
+const client = createClient();
+const options = {
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: ({
+      data: {
+        target: { fields }
+      }
+    }) =>
+      `<img src="${fields.file.url}" alt="${fields.description}" class="post-img"/>`
+  }
+};
+
+export default {
+  async asyncData({ env }) {
+    return Promise.all([
+      // fetch all blog posts sorted by creation date
+      client.getEntries({
+        content_type: "help",
+        order: "-sys.createdAt"
+      })
+    ])
+      .then(([posts]) => {
+        // return data that should be available
+        // in the template
+        console.log(posts.items[0].fields.content);
+        posts.items.map(function(value) {
+          value.fields.content = documentToHtmlString(
+            value.fields.content,
+            options
+          );
+        });
+        return {
+          posts: posts.items
+        };
+      })
+      .catch(console.error);
+  }
+};
+</script>
+
+
 <style>
 h2 {
   color: gray;
 }
-#top-text{
+#top-text {
   margin: 5%;
+}
+.card-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.card {
+  margin: 30px;
+  min-width: 300px;
+  max-width: 450px;
+}
+.card-title {
+  font-weight: bold;
 }
 </style>
