@@ -17,6 +17,23 @@
         <p>さらに、万葉集と深い関わりがあり「万葉のふるさと」とも呼ばれています。新元号である『令和』は万葉集から出典されています。 令和元年に高岡市へどうぞお越しください。</p>
       </div>
     </div>
+
+    <div class="f-area">
+      <div class="f-content">
+        <h2>MissionDayとは？</h2>
+        <p>
+          実績メダルのMission Day って何かなって思っている方いらっしゃいますか？
+          <br />このメダルを獲得する条件は以下の通りとなっています。
+        </p>
+        <ol>
+          <li>参加登録ページ(RSVP)で登録する。</li>
+          <li>イベントの日にイベント用のMission を6個以上完了する</li>
+          <li>受付会場にて受付する。</li>
+        </ol>
+        <p>主催者がNianticにリストを提出、およそ14日以内にメダルが配信されます。</p>
+      </div>
+      <img src="~/assets/img/mission.png" class="f-content" />
+    </div>
     <div id="daibutsu">
       <img src="~/assets/img/daibutsu.jpg" />
     </div>
