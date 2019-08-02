@@ -34,6 +34,43 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      __dangerouslyDisableSanitizers: ["script"],
+      script: [
+        {
+          innerHTML: `{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "MissionDay 高岡",
+  "startDate": "2019-09-21",
+  "location": {
+    "@type": "Place",
+    "name": "ウイングウイング高岡",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "１−８",
+      "addressLocality": "高岡市末広町",
+      "postalCode": "9330023",
+      "addressRegion": "富山県",
+      "addressCountry": "JP"
+    }
+  },
+  "image": [
+    "https://mdtakaoka.info/icon.png"
+   ],
+  "description": "北陸初！INGRESS MissionDay高岡を2019年9月21日(土) 富山県高岡市にて開催致します！"
+}`,
+          type: "application/ld+json"
+        }
+      ]
+    };
+  }
+};
+</script>
+
 <style>
 #top {
   text-align: center;
