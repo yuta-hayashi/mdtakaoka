@@ -82,7 +82,7 @@
 }
 .info {
   text-align: center;
-  margin:2em;
+  margin: 2em;
 }
 .info-btn {
   display: flex;
@@ -108,7 +108,8 @@
     justify-content: center;
   }
   .f-content {
-    max-width: 100%;
+    width: 100%;
+    height: 70%;
   }
 }
 </style>

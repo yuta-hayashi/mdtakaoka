@@ -52,7 +52,9 @@
   color: #616161;
 }
 #navigation {
-  background-color: rgba(245,245,245 ,.90);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 1em;
   position: fixed;
   margin: 0 0 0 auto;
@@ -101,7 +103,7 @@ span {
     display: flex;
     text-align: center;
     padding: 0;
-    margin-bottom:3px;
+    margin-bottom: 3px;
   }
   span {
     padding: 0;
