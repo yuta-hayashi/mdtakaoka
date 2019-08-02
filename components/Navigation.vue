@@ -53,6 +53,7 @@
 }
 #navigation {
   background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: solid 2px #e9ecef;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 1em;
@@ -90,6 +91,7 @@ span {
     display: none;
   }
   #navigation {
+    border-top: solid 1px #e9ecef;
     display: block;
     position: fixed;
     bottom: 0;
@@ -104,6 +106,12 @@ span {
     text-align: center;
     padding: 0;
     margin-bottom: 3px;
+  }
+  .navBotton {
+    padding: 6px;
+  }
+  .active {
+    border-radius: 20px;
   }
   span {
     padding: 0;

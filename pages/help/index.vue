@@ -68,11 +68,6 @@ h2 {
 #top-text {
   margin: 5%;
 }
-.card-list {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
 .card {
   margin: 30px;
   min-width: 300px;
