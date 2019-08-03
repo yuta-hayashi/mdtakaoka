@@ -4,6 +4,7 @@
     <div id="top" class="bg-back">
       <img src="~/assets/img/logo2.svg" id="logo2" />
       <h2 class="subtitle">北陸初となるMissonDayが富山県高岡市で開催決定！</h2>
+      <h3 id="counter">開催まで、あと{{ days }}日</h3>
     </div>
     <div class="f-area">
       <img src="~/assets/img/map.jpg" class="f-content" />
@@ -52,6 +53,8 @@
 </template>
 
 <script>
+import moment from "moment";
+
 export default {
   head() {
     return {
@@ -84,6 +87,14 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    days: function() {
+      const eventDate = moment("2019-09-21 24:00");
+      const today = moment();
+      console.log(moment().date(), eventDate.diff(today, "days"));
+      return eventDate.diff(today, "days");
+    }
   }
 };
 </script>
@@ -102,6 +113,7 @@ export default {
 .subtitle {
   color: white;
   font-size: 1.5em;
+  margin-bottom: 1.5em;
 }
 #about {
   padding: 1em;
@@ -156,6 +168,20 @@ export default {
   width: 100%;
   background-size: cover;
   background: linear-gradient(-45deg, #3fc35f, #64b3f4);
+}
+#counter {
+  display: inline;
+  padding: 5px;
+  color: white;
+}
+#counter {
+  border: solid white;
+  animation: flash 2s ease infinite alternate;
+}
+@keyframes flash {
+  50% {
+    opacity: 0.3;
+  }
 }
 @media (max-width: 1200px) {
   .f-area {
