@@ -18,7 +18,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: ' description', content: 'MissionDay高岡の情報をまとめたWebサイトです。開催情報やミッション、おすすめスポットなどを紹介しています。' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:site', name: 'twitter:site', content: 'https://mdtakaoka.info' },
+      { hid: 'twitter:image', name: 'twitter:image', content: 'https://mdtakaoka.info/ogp.png' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'MissionDay 高岡 特設サイト' },
+      { hid: 'twitter:description', name: 'twitter:description', content: 'MissionDay高岡の情報を発信しています。' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
