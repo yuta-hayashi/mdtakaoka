@@ -51,6 +51,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    ['@nuxtjs/google-analytics', { id: 'UA-143029126-1' }]
   ],
   manifest: {
     name: 'MD高岡 情報サイト',
