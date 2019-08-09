@@ -71,9 +71,12 @@ h2 {
 .card {
   margin: 30px;
   min-width: 300px;
-  max-width: 450px;
+  max-width: 500px;
 }
 .card-title {
   font-weight: bold;
+}
+.post-img{
+  width: 100%;
 }
 </style>
