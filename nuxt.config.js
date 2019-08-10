@@ -6,7 +6,7 @@ const { createClient } = require('./plugins/contentful')
 const cdaClient = createClient()
 
 export default {
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -42,7 +42,7 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/shardsVue'
+  plugins: [{src:'~/plugins/shardsVue', mode: 'client'}
   ],
   /*
   ** Nuxt.js modules
