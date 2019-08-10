@@ -112,7 +112,7 @@ span {
   padding: 5px;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 875px) {
   #title {
     display: none;
   }

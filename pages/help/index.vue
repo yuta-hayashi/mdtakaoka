@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div id="top-text">
+    <div class="top-text">
       <h2>ヘルプ</h2>
       <p>よくある質問と答えを掲載しています。</p>
     </div>
@@ -65,9 +65,6 @@ export default {
 h2 {
   color: gray;
 }
-#top-text {
-  margin: 5%;
-}
 .card {
   margin: 30px;
   min-width: 300px;
@@ -75,8 +72,5 @@ h2 {
 }
 .card-title {
   font-weight: bold;
-}
-.post-img{
-  width: 100%;
 }
 </style>

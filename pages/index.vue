@@ -183,13 +183,14 @@ export default {
     opacity: 0.3;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1170px) {
   .f-area {
     justify-content: center;
   }
   .f-content {
     width: 100%;
     height: 70%;
+    max-width: 90%;
   }
 }
 </style>

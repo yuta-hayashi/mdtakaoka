@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div id="top-text">
+    <div class="top-text">
       <h2>おすすめスポット</h2>
       <p>地元のお店や見所などを紹介していきます。</p>
     </div>

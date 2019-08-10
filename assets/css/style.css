@@ -1,6 +1,15 @@
 .content{
     padding-top:80px;
 }
+.card{
+  margin: 15px !important;
+}
+.top-text {
+  margin: 5%;
+}
+.post-img{
+  width: 100% !important;
+}
 a:hover {
   text-decoration: none !important;
 }

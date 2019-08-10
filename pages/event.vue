@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div id="top-text">
+    <div class="top-text">
       <h2>イベント情報</h2>
       <p>MissionDay高岡で開催されるイベント情報です。</p>
     </div>
@@ -64,9 +64,6 @@ export default {
 <style>
 h2 {
   color: gray;
-}
-#top-text {
-  margin: 5%;
 }
 .card {
   margin: 30px;
