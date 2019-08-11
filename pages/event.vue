@@ -7,7 +7,7 @@
     <div class="card-list">
       <d-card v-for="item in posts" :key="item.sys.id" class="event-card">
         <d-card-img :src="item.fields.cover.fields.file.url + '?fit=thumb&f=top&h=230&w=400'" top />
-        <d-card-body :title=item.fields.title>
+        <d-card-body :title="item.fields.title">
           <div v-html="item.fields.content" class="post"></div>
         </d-card-body>
       </d-card>
@@ -62,19 +62,29 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
+.card-list {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
 h2 {
   color: gray;
 }
 .event-card {
   margin: 30px;
-  min-width: 300px;
+  width: 70%;
   max-width: 700px;
 }
 .card-title {
   font-weight: bold;
 }
-.post-img{
+.post-img {
   width: 100%;
+}
+@media (max-width: 875px) {
+  .event-card{
+    width: 90%;
+  }
 }
 </style>

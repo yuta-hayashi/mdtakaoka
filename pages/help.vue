@@ -62,16 +62,26 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 h2 {
   color: gray;
 }
+.card-list {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
 .card {
   margin: 30px;
-  min-width: 300px;
-  max-width: 550px !important;
+  width: 60%;
+  max-width: 550px;
 }
 .card-title {
   font-weight: bold;
+}
+@media (max-width: 875px) {
+  .card{
+    width: 90%;
+  }
 }
 </style>

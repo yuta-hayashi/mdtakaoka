@@ -34,7 +34,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 body{
     padding: 1em;
 }

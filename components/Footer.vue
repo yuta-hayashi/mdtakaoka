@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .link {
   color: gray;
 }

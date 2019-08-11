@@ -42,7 +42,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 body {
   background-color: #0a0203;
   color: aliceblue;

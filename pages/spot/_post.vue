@@ -46,7 +46,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .title {
   padding: 10px;
 }

@@ -42,7 +42,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .card {
   margin: 30px;
   max-width: 450px;

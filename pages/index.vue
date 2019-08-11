@@ -118,7 +118,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #top {
   text-align: center;
   padding: 2em;
@@ -198,6 +198,17 @@ export default {
 #counter {
   border: solid white;
   animation: flash 2s ease infinite;
+}
+.navBotton {
+  padding: 10px;
+  color: gray;
+  fill: gray;
+}
+.active {
+  background-image: linear-gradient(45deg, #4facfe 0%, #3fc35f 100%);
+  border-radius: 25px;
+  fill: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 }
 @keyframes flash {
   50% {
