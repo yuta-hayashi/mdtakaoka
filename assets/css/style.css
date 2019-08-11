@@ -19,7 +19,7 @@ a:hover {
 body{
   font-weight: 400;
 }
-@media (max-width: 740px) {
+@media (max-width: 875px) {
     .content {
       padding-top: 0;
     }
