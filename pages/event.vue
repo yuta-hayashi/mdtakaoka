@@ -69,7 +69,7 @@ h2 {
 .event-card {
   margin: 30px;
   min-width: 300px;
-  max-width: 700px !important;
+  max-width: 700px;
 }
 .card-title {
   font-weight: bold;
