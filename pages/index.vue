@@ -95,7 +95,7 @@ export default {
       // fetch all blog posts sorted by creation date
       client.getEntries({
         content_type: "top",
-        order: "sys.updatedAt"
+        order: "sys.createdAt"
       })
     ])
       .then(([posts]) => {
