@@ -5,7 +5,7 @@
       <p>MissionDay高岡で開催されるイベント情報です。</p>
     </div>
     <div class="card-list">
-      <d-card v-for="item in posts" :key="item.sys.id" class="card">
+      <d-card v-for="item in posts" :key="item.sys.id" class="event-card">
         <d-card-img :src="item.fields.cover.fields.file.url + '?fit=thumb&f=top&h=230&w=400'" top />
         <d-card-body :title=item.fields.title>
           <div v-html="item.fields.content" class="post"></div>
@@ -65,10 +65,10 @@ export default {
 h2 {
   color: gray;
 }
-.card {
+.event-card {
   margin: 30px;
   min-width: 300px;
-  max-width: 500px;
+  max-width: 700px !important;
 }
 .card-title {
   font-weight: bold;

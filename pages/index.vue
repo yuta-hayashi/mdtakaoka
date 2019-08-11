@@ -186,10 +186,12 @@ export default {
 @media (max-width: 1170px) {
   .f-area {
     justify-content: center;
+    padding: 0;
   }
   .f-content {
     width: 100%;
     height: 70%;
+    padding:0.5em;
     max-width: 90%;
   }
 }
