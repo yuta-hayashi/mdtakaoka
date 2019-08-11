@@ -1,10 +1,6 @@
 <template>
   <div class="footer">
-    <p>
-      制作：MissionDay高岡 実行委員会, 
-      <a href="/policy" class="link">privacy polisy</a>
-    </p>
-    <p>&copy; 2019 mdtakaoka.info</p>
+    <p>&copy; 2019 MissionDay高岡 実行委員会, <a href="/policy" class="link">サイト規約</a></p>
   </div>
 </template>
 

@@ -29,6 +29,8 @@
     <a
       href="https://niantic.helpshift.com/a/ingress/?s=events-and-shop-support&f=brand-and-fan-site-guidelines&p=web"
     >ブランド/ファン サイト ガイドライン</a>
+    <hr>
+    <button type="button" onclick="history.back()">mdtakaoka.infoへ戻る</button>
   </div>
 </template>
 

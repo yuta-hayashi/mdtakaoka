@@ -176,7 +176,7 @@ export default {
 }
 #counter {
   border: solid white;
-  animation: flash 2s ease infinite alternate;
+  animation: flash 2s ease infinite;
 }
 @keyframes flash {
   50% {
