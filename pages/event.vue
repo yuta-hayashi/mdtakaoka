@@ -38,7 +38,7 @@ export default {
       // fetch all blog posts sorted by creation date
       client.getEntries({
         content_type: "event",
-        order: "-sys.createdAt"
+        order: "sys.updatedAt"
       })
     ])
       .then(([posts]) => {
@@ -51,6 +51,7 @@ export default {
             options
           );
         });
+        //console.log(posts.items);
         return {
           posts: posts.items
         };
