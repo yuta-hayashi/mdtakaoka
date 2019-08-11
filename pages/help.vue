@@ -44,14 +44,14 @@ export default {
       .then(([posts]) => {
         // return data that should be available
         // in the template
-        console.log(posts.items[0].fields.content);
+        //console.log(posts.items[0].fields.content);
         posts.items.map(function(value) {
           value.fields.content = documentToHtmlString(
             value.fields.content,
             options
           );
         });
-        console.log(posts.items);
+        //console.log(posts.items);
         return {
           posts: posts.items
         };

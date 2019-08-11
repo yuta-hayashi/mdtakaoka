@@ -34,7 +34,7 @@ export default {
     return await client
       .getEntry(params.mission)
       .then(entrie => {
-        console.log(entrie.fields.article);
+        //console.log(entrie.fields.article);
         return {
           title: entrie.fields.title,
           post: documentToHtmlString(entrie.fields.article, options)

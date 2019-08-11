@@ -62,7 +62,7 @@
 export default {
   computed: {
     isRouteActive: function() {
-      console.log("PATH ==> ", this.$nuxt.$route.path);
+      //console.log("PATH ==> ", this.$nuxt.$route.path);
       if (this.$nuxt.$route.path == "/") {
         return true;
       } else {
