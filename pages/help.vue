@@ -38,7 +38,7 @@ export default {
       // fetch all blog posts sorted by creation date
       client.getEntries({
         content_type: "help",
-        order: "-sys.createdAt"
+        order: "-sys.updatedAt"
       })
     ])
       .then(([posts]) => {
@@ -51,6 +51,7 @@ export default {
             options
           );
         });
+        console.log(posts.items);
         return {
           posts: posts.items
         };
@@ -68,7 +69,7 @@ h2 {
 .card {
   margin: 30px;
   min-width: 300px;
-  max-width: 500px;
+  max-width: 550px !important;
 }
 .card-title {
   font-weight: bold;
