@@ -6,34 +6,13 @@
       <h2 class="subtitle">北陸初となるMissonDayが富山県高岡市で開催決定！</h2>
       <h3 id="counter">開催まで、あと{{ days }}日</h3>
     </div>
-    <div class="f-area">
-      <img src="~/assets/img/map.jpg" class="f-content" />
-      <div class="f-content">
-        <h2>高岡市について</h2>
-        <p>富山県高岡市は富山県北西部に位置する400年以上の歴史がある街です。</p>
-        <p>
-          1609年に加賀藩二代藩主前田利長が高岡城を築き開き、現在は銅器や漆器など「ものづくりのまち」として発展してきました。
-          <br />またイケメンと名高い高岡大仏、国宝瑞龍寺など歴史と文化が交差する工芸都市です。
-        </p>
-        <p>さらに、万葉集と深い関わりがあり「万葉のふるさと」とも呼ばれています。新元号である『令和』は万葉集から出典されています。 令和元年に高岡市へどうぞお越しください。</p>
-      </div>
-    </div>
 
-    <div class="f-area">
+    <div v-for="item in posts" :key="item.sys.id" class="f-area">
+      <img :src="item.fields.cover.fields.file.url" class="f-content" />
       <div class="f-content">
-        <h2>MissionDayとは？</h2>
-        <p>
-          実績メダルのMission Day って何かなって思っている方いらっしゃいますか？
-          <br />このメダルを獲得する条件は以下の通りとなっています。
-        </p>
-        <ol>
-          <li>参加登録ページ(RSVP)で登録する。</li>
-          <li>イベントの日にイベント用のMission を6個以上完了する</li>
-          <li>受付会場にて受付する。</li>
-        </ol>
-        <p>主催者がNianticにリストを提出、およそ14日以内にメダルが配信されます。</p>
+        <h2>{{item.fields.title}}</h2>
+        <div v-html="item.fields.content" class="post"></div>
       </div>
-      <img src="~/assets/img/mission.png" class="f-content" />
     </div>
     <div id="daibutsu">
       <img src="~/assets/img/daibutsu.jpg" />
@@ -54,6 +33,21 @@
 
 <script>
 import moment from "moment";
+import { createClient } from "~/plugins/contentful.js";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+
+const client = createClient();
+const options = {
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: ({
+      data: {
+        target: { fields }
+      }
+    }) =>
+      `<img src="${fields.file.url}" alt="${fields.description}" class="post-img"/>`
+  }
+};
 
 export default {
   head() {
@@ -95,6 +89,31 @@ export default {
       console.log(moment().date(), eventDate.diff(today, "days"));
       return eventDate.diff(today, "days");
     }
+  },
+  async asyncData({ env }) {
+    return Promise.all([
+      // fetch all blog posts sorted by creation date
+      client.getEntries({
+        content_type: "top",
+        order: "sys.updatedAt"
+      })
+    ])
+      .then(([posts]) => {
+        // return data that should be available
+        // in the template
+        //console.log(posts.items[0].fields.content);
+        posts.items.map(function(value) {
+          value.fields.content = documentToHtmlString(
+            value.fields.content,
+            options
+          );
+        });
+        console.log(posts.items);
+        return {
+          posts: posts.items
+        };
+      })
+      .catch(console.error);
   }
 };
 </script>
@@ -130,6 +149,7 @@ export default {
 }
 .f-area h2 {
   font-weight: bold;
+  font-size: 2em;
   color: rgb(65, 65, 65);
 }
 .f-area {
@@ -137,9 +157,10 @@ export default {
   flex-wrap: wrap;
   padding: 2em;
   justify-content: center;
+  border-bottom: solid 1px #e9ecef;
 }
 .f-content {
-  max-width: 550px;
+  width: 550px;
   padding: 1em;
 }
 .info h4 {
@@ -191,7 +212,7 @@ export default {
   .f-content {
     width: 100%;
     height: 70%;
-    padding:0.5em;
+    padding: 0.5em;
     max-width: 90%;
   }
 }
