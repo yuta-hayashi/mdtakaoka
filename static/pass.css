@@ -1,6 +1,24 @@
-#fast-pass{
-    color:black;
-    text-align: center;
-    border: solid 2px black;
-    width: 400px;
-  }
+.content {
+  padding: 6em 3em;
+}
+
+#fast-pass {
+  color: black;
+  text-align: center;
+  border: solid 2px black;
+  width: 200px;
+  padding: 2em;
+}
+@import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
+.exo {
+  font-family: "Exo", sans-serif !important;
+  font-style: inherit;
+  font-weight: normal;
+}
+p{
+  font-size: 0.8em;
+}
+
+.italic {
+  font-style: italic;
+}

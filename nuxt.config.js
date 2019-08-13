@@ -52,8 +52,14 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    ['@nuxtjs/google-analytics', { id: 'UA-143029126-1' }]
+    ['@nuxtjs/google-analytics', { id: 'UA-143029126-1' }],
+    'nuxt-webfontloader',
   ],
+  webfontloader: {
+    google: {
+      families: ['Exo']
+    }
+  },
   manifest: {
     name: 'MD高岡 情報サイト',
     short_name: "MD高岡.info",

@@ -20,6 +20,7 @@
     "dotenv": "^8.0.0",
     "moment": "^2.24.0",
     "nuxt": "^2.0.0",
+    "nuxt-webfontloader": "^1.1.0",
     "qrcanvas-vue": "^2.0.3",
     "qrcode.vue": "^1.6.2",
     "shards-vue": "^1.0.7",
