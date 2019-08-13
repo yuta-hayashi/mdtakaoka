@@ -59,10 +59,11 @@ export default {
   "@context": "https://schema.org",
   "@type": "Event",
   "name": "MissionDay 高岡",
-  "startDate": "2019-09-21",
+  "startDate": "2019-09-21T10:00",
+  "endDate": "2019-09-21T18:00",
   "location": {
     "@type": "Place",
-    "name": "ウイングウイング高岡",
+    "name": "ウイングウ・イング高岡 広場",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "１−８",
