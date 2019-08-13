@@ -100,7 +100,7 @@ export default {
     dev: true,
     runtimeCaching: [
       {
-        urlPattern: 'https://images.ctfassets.net/**/**/**/*',
+        urlPattern: 'https://images.ctfassets.net/\*',
         strategyOptions: {
           cacheName: 'contentful-assets',
           cacheExpiration: {
