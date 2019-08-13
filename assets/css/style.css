@@ -1,26 +1,37 @@
-.content{
-    padding-top:80px;
+.content {
+  padding-top: 80px;
 }
-.card{
+
+.card {
   margin: 15px !important;
 }
+
 .top-text {
   margin: 5%;
 }
-.post-img{
+
+.post-img {
   width: 100% !important;
 }
+
 a:hover {
   text-decoration: none !important;
 }
-.bg-back{
+
+.bg-back {
   background-image: linear-gradient(45deg, #4facfe 0%, #3fc35f 100%);
 }
-body{
+
+body {
   font-weight: 400;
 }
+
+.subtitle {
+  color: rgb(65,65,65);
+}
+
 @media (max-width: 875px) {
-    .content {
-      padding-top: 0;
-    }
+  .content {
+    padding-top: 0;
   }
+}

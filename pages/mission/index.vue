@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="top-text">
-      <h2>ミッション一覧</h2>
+      <h2 class="subtitle">ミッション一覧</h2>
       <p>それぞれのミッションの地図や詳細を掲載しています。</p>
     </div>
     <card-list :posts="posts" :page="page"></card-list>

@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="top-text">
-      <h2>おすすめスポット</h2>
+      <h2 class="subtitle">おすすめスポット</h2>
       <p>地元のお店や見所などを紹介していきます。</p>
     </div>
     <card-list :posts="posts" :page="page"></card-list>

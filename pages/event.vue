@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="top-text">
-      <h2>イベント情報</h2>
+      <h2 class="subtitle">イベント情報</h2>
       <p>MissionDay高岡で開催されるイベント情報です。</p>
     </div>
     <div class="card-list">
@@ -67,9 +67,6 @@ export default {
   display: flex;
   flex-wrap:wrap;
   justify-content: center;
-}
-h2 {
-  color: gray;
 }
 .event-card {
   margin: 30px;

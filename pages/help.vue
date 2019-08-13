@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="top-text">
-      <h2>ヘルプ</h2>
+      <h2 class="subtitle">ヘルプ</h2>
       <p>よくある質問と答えを掲載しています。</p>
     </div>
     <div class="card-list">
@@ -63,9 +63,6 @@ export default {
 
 
 <style scoped>
-h2 {
-  color: gray;
-}
 .card-list {
   display: flex;
   flex-wrap:wrap;
