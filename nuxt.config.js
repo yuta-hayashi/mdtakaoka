@@ -24,6 +24,7 @@ export default {
       { hid: 'twitter:image', name: 'twitter:image', content: 'https://mdtakaoka.info/ogp.png' },
       { hid: 'twitter:title', name: 'twitter:title', content: 'MissionDay 高岡 特設サイト' },
       { hid: 'twitter:description', name: 'twitter:description', content: 'MissionDay高岡の情報を発信しています。' },
+      { hid: 'apple-mobile-web-app-status-bar-style', name: 'apple-mobile-web-app-status-bar-style', content: 'white' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -42,7 +43,7 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{src:'~/plugins/shardsVue', mode: 'client'}
+  plugins: [{ src: '~/plugins/shardsVue', mode: 'client' }
   ],
   /*
   ** Nuxt.js modules
