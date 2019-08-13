@@ -101,10 +101,11 @@ export default {
     runtimeCaching: [
       {
         urlPattern: 'https://images.ctfassets.net/\*',
+        handler: 'staleWhileRevalidate',
         strategyOptions: {
           cacheName: 'contentful-assets',
           cacheExpiration: {
-            maxEntries: 10,
+            maxEntries: 100,
             maxAgeSeconds: 80000
           }
         }
