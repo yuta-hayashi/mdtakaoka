@@ -96,4 +96,19 @@ export default {
       })
     }
   },
+  workbox: {
+    dev: true,
+    runtimeCaching: [
+      {
+        urlPattern: 'http://images.ctfassets.net/*',
+        strategyOptions: {
+          cacheName: 'contentful-assets',
+          cacheExpiration: {
+            maxEntries: 10,
+            maxAgeSeconds: 60
+          }
+        }
+      }
+    ]
+  }
 }

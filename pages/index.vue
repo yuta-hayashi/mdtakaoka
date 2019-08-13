@@ -86,7 +86,7 @@ export default {
     days: function() {
       const eventDate = moment("2019-09-21 24:00");
       const today = moment();
-      console.log(moment().date(), eventDate.diff(today, "days"));
+      //console.log(moment().date(), eventDate.diff(today, "days"));
       return eventDate.diff(today, "days");
     }
   },
@@ -108,7 +108,7 @@ export default {
             options
           );
         });
-        console.log(posts.items);
+        //console.log(posts.items);
         return {
           posts: posts.items
         };
