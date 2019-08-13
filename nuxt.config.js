@@ -105,7 +105,7 @@ export default {
           cacheName: 'contentful-assets',
           cacheExpiration: {
             maxEntries: 10,
-            maxAgeSeconds: 60
+            maxAgeSeconds: 80000
           }
         }
       }
