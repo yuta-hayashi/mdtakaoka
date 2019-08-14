@@ -6,7 +6,8 @@
         <p>AgentNameを入力してください</p>
         <d-input v-model="inputText" placeholder="AgentName" pattern="^[0-9A-Za-z]+$" required />
         <p>※ゲーム内の名前を間違えなく入力お願いします。大文字・小文字は判別しません。</p>
-        <d-button type="button" @click="generate" size="lg button">FASTPASS発行</d-button>
+        <d-checkbox v-model="rsvpCheck" name="rsvp-check" value="true">IngressのMissionDayのサイトで参加登録をしました。</d-checkbox>
+        <d-button type="button" @click="generate" size="lg button" :disabled="!rsvpCheck">FASTPASS発行</d-button>
       </div>
       <div v-if="status">
         <div id="print-area">
@@ -115,6 +116,7 @@ export default {
       name: "",
       kana: "",
       inputText: "",
+      rsvpCheck: false,
       status: false
     };
   },
@@ -166,12 +168,43 @@ export default {
   max-width: 400px;
   padding: 2em;
 }
-.exo{
+.exo {
+  font-family: "Exo", sans-serif !important;
+  font-style: inherit;
+  font-weight: normal;
+}
+.italic {
+  font-style: italic;
+}
+@media print {
+  #__layout > *:not(#print-area) {
+    display: none;
+  }
+  .content {
+    padding: 6em 3em;
+  }
+  .exo {
+    color: red;
+  }
+  #fast-pass {
+    color: black;
+    text-align: center;
+    border: solid 2px black;
+    width: 1000mm !important;
+    padding: 2em;
+  }
+  @import url("https://fonts.googleapis.com/css?family=Exo&display=swap");
+  .exo {
     font-family: "Exo", sans-serif !important;
     font-style: inherit;
     font-weight: normal;
   }
-.italic{
-  font-style: italic;
+  p {
+    font-size: 0.8em;
+  }
+
+  .italic {
+    font-style: italic;
+  }
 }
 </style>
