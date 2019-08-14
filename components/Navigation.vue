@@ -150,7 +150,13 @@ span {
     padding: 0;
     font-size: 0.8em;
     display: block;
-    color: black;
+    color: gray;
+  }
+}
+@media (max-width: 320px) {
+  span {
+    padding: 0;
+    font-size: 0.6em;
   }
 }
 </style>

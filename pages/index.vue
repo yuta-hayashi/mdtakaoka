@@ -199,6 +199,7 @@ export default {
 #counter {
   border: solid white;
   animation: flash 2s ease infinite;
+  font-size: 1.5em;
 }
 .navBotton {
   padding: 10px;
