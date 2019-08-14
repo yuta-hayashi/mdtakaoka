@@ -17,7 +17,7 @@ export default {
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
       { hid: 'description', name: ' description', content: 'MissionDay高岡の情報をまとめたWebサイトです。開催情報やミッション、おすすめスポットなどを紹介しています。' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:site', name: 'twitter:site', content: 'https://mdtakaoka.info' },

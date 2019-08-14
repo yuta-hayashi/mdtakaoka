@@ -137,6 +137,8 @@ span {
     text-align: center;
     padding: 0;
     margin-bottom: 3px;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
   }
   .navBotton {
     padding: 6px;
