@@ -17,7 +17,7 @@
   text-align: center;
   background-color: #f3f3f3;
 }
-@media (max-width: 720px) {
+@media (max-width: 875px) {
   .footer {
     padding-bottom: 4em;
   }
