@@ -2,6 +2,7 @@
   <d-card>
     <d-card-img :src="cover+'?fit=thumb&f=top&h=230&w=400'" top />
     <d-card-body :title="title">
+      <p>{{article.content[0].content[0].value.slice(0,20)}}...</p>
       <n-link :to="postUrl">
         <d-btn theme="primary">続きを読む &rarr;</d-btn>
       </n-link>
@@ -25,9 +26,13 @@ export default {
       type: String,
       required: false
     },
-    page:{
+    page: {
       type: String,
-      required:true
+      required: true
+    },
+    article: {
+      type: String,
+      required: false
     },
     id: {
       type: String,
@@ -36,7 +41,7 @@ export default {
   },
   computed: {
     postUrl: function() {
-      return "/"+this.page+"/" + this.id;
+      return "/" + this.page + "/" + this.id;
     }
   }
 };

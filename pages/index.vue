@@ -74,7 +74,9 @@ export default {
     }
   },
   "image": [
-    "https://mdtakaoka.info/icon.png"
+    "https://mdtakaoka.info/image1x1.jpg",
+    "https://mdtakaoka.info/image4x3.jpg",
+    "https://mdtakaoka.info/image16x9.jpg"
    ],
   "description": "北陸初！INGRESS MissionDay高岡を2019年9月21日(土) 富山県高岡市にて開催致します！"
 }`,

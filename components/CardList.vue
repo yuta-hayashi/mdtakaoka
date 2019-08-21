@@ -6,6 +6,7 @@
       :cover="post.fields.cover.fields.file.url"
       :category="post.fields.category"
       :page="page"
+      :article="post.fields.article"
       :id="post.sys.id"
       :key="post.sys.id"
     ></card>
