@@ -1,6 +1,6 @@
 <template>
   <d-card>
-    <d-card-img :src="cover+'?fit=thumb&f=top&h=230&w=400'" top />
+    <d-card-img :src="cover+'?fit=thumb&f=top&h=260&w=500'" top />
     <d-card-body :title="title">
       <n-link :to="postUrl">
         <d-btn theme="primary">続きを読む &rarr;</d-btn>
@@ -45,6 +45,6 @@ export default {
 <style scoped>
 .card {
   margin: 30px;
-  max-width: 450px;
+  max-width: 500px;
 }
 </style>
