@@ -8,17 +8,17 @@
 <script>
 import { createClient } from "~/plugins/contentful.js";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
+import { INLINES, BLOCKS } from "@contentful/rich-text-types";
 
 const client = createClient();
 const options = {
   renderNode: {
-    [BLOCKS.EMBEDDED_ASSET]: ({
-      data: {
-        target: { fields }
-      }
-    }) =>
-      `<img src="${fields.file.url+'&q=80'}" alt="${fields.description}" class="post-img"/>`
+    [INLINES.HYPERLINK]: (node, next) =>
+      `<a href=${
+        node.data.uri
+      } target="_blank" rel="noreferrer noopener">${next(node.content)}</a>`,
+       [BLOCKS.EMBEDDED_ASSET]: (node) =>
+      `<img src="${node.data.target.fields.file.url+'?fm=jpg&q=50'}" class="post-img"/>`
   }
 };
 
