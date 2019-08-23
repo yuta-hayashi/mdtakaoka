@@ -33,7 +33,7 @@ export default {
       .then(([posts]) => {
         // return data that should be available
         // in the template
-        console.log(posts.items);
+        //console.log(posts.items);
         return {
           posts: posts.items,
           page: "spot"

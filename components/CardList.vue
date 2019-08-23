@@ -22,8 +22,8 @@ export default {
       type: Array,
       required: true
     },
-    page:{
-      type:String,
+    page: {
+      type: String,
       required: true
     }
   }

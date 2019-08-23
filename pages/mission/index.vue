@@ -5,12 +5,13 @@
       <p>ミッションの見どころを紹介しています。</p>
     </div>
     <div class="card-list">
-      <d-card v-for="item in posts" :key="item.sys.id" class="card">
-        <d-card-img :src="item.fields.cover.fields.file.url+'?fit=thumb&f=top&h=270&w=500'" top />
-        <d-card-body :title="item.fields.title">
-          <div v-html="item.fields.article" class="post"></div>
-        </d-card-body>
-      </d-card>
+      <EventCards
+        v-for="card in posts"
+        :key="card.sys.id"
+        :cover="card.fields.cover.fields.file.url"
+        :title="card.fields.title"
+        :body="card.fields.article"
+      ></EventCards>
     </div>
   </div>
 </template>
@@ -19,6 +20,7 @@
 import { createClient } from "~/plugins/contentful.js";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import EventCards from "~/components/EventCards.vue";
 
 const client = createClient();
 const options = {
@@ -54,13 +56,14 @@ export default {
             options
           );
         });
-        console.log(posts.items);
+        //console.log(posts.items);
         return {
           posts: posts.items
         };
       })
       .catch(console.error);
-  }
+  },
+  components: { EventCards }
 };
 </script>
 
@@ -70,18 +73,5 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-.card {
-  margin: 30px;
-  width: 60%;
-  max-width: 550px;
-}
-.card-title {
-  font-weight: bold;
-}
-@media (max-width: 875px) {
-  .card {
-    width: 90%;
-  }
 }
 </style>
