@@ -8,7 +8,9 @@
     </div>
 
     <div v-for="item in posts" :key="item.sys.id" class="f-area">
-      <img :src="item.fields.cover.fields.file.url" class="f-content" />
+      <div class="f-content">
+        <img :src="item.fields.cover.fields.file.url" class="f-img" />
+      </div>
       <div class="f-content">
         <h2>{{item.fields.title}}</h2>
         <div v-html="item.fields.content" class="post"></div>
@@ -166,6 +168,11 @@ export default {
 .f-content {
   width: 550px;
   padding: 1em;
+}
+.f-img{
+  width:100%;
+  max-width: 700px;
+  height: auto;
 }
 .info h4 {
   font-weight: bold;
