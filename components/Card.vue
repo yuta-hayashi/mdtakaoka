@@ -1,6 +1,6 @@
 <template>
   <d-card>
-    <d-card-img :src="cover+'?fit=thumb&f=top&h=270&w=500'" top />
+    <d-card-img :src="cover+'?fit=thumb&f=top&h=270&w=500&q=80'" top />
     <d-card-body :title="title">
       <p>{{article.content[0].content[0].value.slice(0,20)}}...</p>
       <n-link :to="postUrl">

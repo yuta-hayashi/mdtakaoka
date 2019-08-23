@@ -28,7 +28,7 @@ const options = {
         target: { fields }
       }
     }) =>
-      `<img src="${fields.file.url}" alt="${fields.description}" class="post-img"/>`
+      `<img src="${fields.file.url+'?fm=jpg&q=50'}" alt="${fields.description}" class="post-img"/>`
   }
 };
 

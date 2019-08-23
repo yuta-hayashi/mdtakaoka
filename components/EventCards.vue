@@ -1,6 +1,6 @@
 <template>
     <d-card>
-      <img :src="cover+'?fit=thumb&f=top&h=270&w=500'" class="card-img-top"/>
+      <img :src="cover+'?fit=thumb&f=top&h=270&w=500&q=80'" class="card-img-top"/>
       <d-card-body :title="title">
         <div v-html="body" class="post"></div>
       </d-card-body>

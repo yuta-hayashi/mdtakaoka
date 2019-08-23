@@ -6,7 +6,7 @@
     </div>
     <div class="card-list">
       <d-card v-for="item in posts" :key="item.sys.id" class="event-card">
-        <d-card-img :src="item.fields.cover.fields.file.url + '?fit=thumb&f=top&h=270&w=500'" top />
+        <d-card-img :src="item.fields.cover.fields.file.url + '?fit=thumb&f=top&h=270&w=500&q=80'" top />
         <d-card-body :title="item.fields.title">
           <div v-html="item.fields.content" class="post"></div>
         </d-card-body>
@@ -28,7 +28,7 @@ const options = {
         target: { fields }
       }
     }) =>
-      `<img src="${fields.file.url}" alt="${fields.description}" class="post-img"/>`
+      `<img src="${fields.file.url+'?fm=jpg&q=50'}" alt="${fields.description}" class="post-img"/>`
   }
 };
 

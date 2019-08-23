@@ -9,7 +9,7 @@
 
     <div v-for="item in posts" :key="item.sys.id" class="f-area">
       <div class="f-content">
-        <img :src="item.fields.cover.fields.file.url" class="f-img" />
+        <img :src="item.fields.cover.fields.file.url+'?fm=jpg&q=80'" class="f-img" />
       </div>
       <div class="f-content">
         <h2>{{item.fields.title}}</h2>
@@ -47,7 +47,7 @@ const options = {
         target: { fields }
       }
     }) =>
-      `<img src="${fields.file.url}" alt="${fields.description}" class="post-img"/>`
+      `<img src="${fields.file.url+'?fm=jpg&q=80'}" alt="${fields.description}" class="post-img"/>`
   }
 };
 
@@ -169,8 +169,8 @@ export default {
   width: 550px;
   padding: 1em;
 }
-.f-img{
-  width:100%;
+.f-img {
+  width: 100%;
   max-width: 700px;
   height: auto;
 }
