@@ -41,6 +41,9 @@ export default {
         };
       })
       .catch(console.error);
+  },
+  head() {
+    return { title: this.title +" | " };
   }
 };
 </script>
@@ -52,8 +55,8 @@ export default {
 .post {
   margin: 0 5%;
 }
-.post-img{
-  width:80%;
+.post-img {
+  width: 80%;
   max-width: 800px;
 }
 </style>

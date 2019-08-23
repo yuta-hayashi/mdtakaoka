@@ -33,6 +33,9 @@ const options = {
 };
 
 export default {
+  head() {
+    return { title: "ヘルプ｜" };
+  },
   async asyncData({ env }) {
     return Promise.all([
       // fetch all blog posts sorted by creation date

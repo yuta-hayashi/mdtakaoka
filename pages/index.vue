@@ -53,6 +53,7 @@ export default {
   head() {
     return {
       __dangerouslyDisableSanitizers: ["script"],
+      title:"",
       script: [
         {
           innerHTML: `{

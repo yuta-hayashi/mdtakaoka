@@ -33,6 +33,9 @@ const options = {
 };
 
 export default {
+  head() {
+    return { title: "イベント｜" };
+  },
   async asyncData({ env }) {
     return Promise.all([
       // fetch all blog posts sorted by creation date
@@ -65,7 +68,7 @@ export default {
 <style scoped>
 .card-list {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .event-card {
@@ -80,7 +83,7 @@ export default {
   width: 100%;
 }
 @media (max-width: 875px) {
-  .event-card{
+  .event-card {
     width: 90%;
   }
 }

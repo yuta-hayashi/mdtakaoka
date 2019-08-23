@@ -11,7 +11,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'MissionDay 高岡 特設サイト',
+    titleTemplate:"%s MissionDay 高岡",
     htmlAttrs: {
       lang: 'ja'
     },
@@ -61,7 +61,7 @@ export default {
     }
   },
   manifest: {
-    name: 'MD高岡 情報サイト',
+    name: 'MissonDay 高岡',
     short_name: "MD高岡.info",
     lang: 'ja'
   },
