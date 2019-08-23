@@ -27,7 +27,7 @@ body {
 }
 
 .subtitle {
-  color: rgb(65,65,65);
+  color: rgb(65, 65, 65);
 }
 
 @media (max-width: 875px) {
@@ -37,8 +37,32 @@ body {
 }
 
 .page-enter-active, .page-leave-active {
-  transition: opacity 0.1s
+  transition: opacity 0.2s
 }
+
 .page-enter, .page-leave-active {
   opacity: 0
+}
+
+body {
+  animation: fadeIn 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
 }
