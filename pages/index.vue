@@ -26,8 +26,8 @@
         <br />また、TwitterやTelegramを通じて最新情報をお届けしています！ぜひご活用ください。
       </p>
       <div class="info-btn">
-        <a href="https://twitter.com/mdtakaoka" class="navBotton active">Twitterアカウント</a>
-        <a href="https://t.me/joinchat/AAAAAFQj7GWHVx469bwPLA" class="navBotton active">Telegramチャネル</a>
+        <a href="https://twitter.com/mdtakaoka" class="navBotton active" target="_blank" rel="noreferrer noopener">Twitterアカウント</a>
+        <a href="https://t.me/joinchat/AAAAAFQj7GWHVx469bwPLA" class="navBotton active" target="_blank" rel="noreferrer noopener">Telegramチャネル</a>
       </div>
     </div>
   </div>
