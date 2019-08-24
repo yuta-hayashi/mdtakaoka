@@ -103,11 +103,10 @@ export default {
     }
   },
   workbox: {
-    dev: true,
     runtimeCaching: [
       {
         urlPattern: 'https://images.ctfassets.net/\*',
-        handler: 'staleWhileRevalidate',
+        handler: 'networkFirst',
         strategyOptions: {
           cacheName: 'contentful-assets',
           cacheExpiration: {
