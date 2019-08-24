@@ -12,8 +12,12 @@
 
 .post-img {
   width: 100% !important;
+  margin-bottom: 1em;
 }
 
+p{
+  font-weight: 400;
+}
 a:hover {
   text-decoration: none !important;
 }
