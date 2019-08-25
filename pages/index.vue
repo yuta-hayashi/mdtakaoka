@@ -69,7 +69,7 @@ export default {
     "name": "ウイングウ・イング高岡 広場",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "１−８",
+      "streetAddress": "１",
       "addressLocality": "高岡市末広町",
       "postalCode": "9330023",
       "addressRegion": "富山県",
