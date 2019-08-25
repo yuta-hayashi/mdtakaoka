@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <p>&copy; 2019 MissionDay高岡 実行委員会, <a href="/policy" class="link">サイト規約</a></p>
+    <p>&copy; 2019 MissionDay高岡 実行委員会, <n-link to="/policy" class="link">サイト規約</n-link></p>
   </div>
 </template>
 

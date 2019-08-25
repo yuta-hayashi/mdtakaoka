@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>プライバシーポリシー</h1>
+  <div id="policy">
+    <h1>サイト規約</h1>
     <h2>アクセス解析ツールについて</h2>
     <p>当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。</p>
     <p>
@@ -11,7 +11,8 @@
     </p>
     <a
       href="https://marketingplatform.google.com/about/analytics/terms/jp/"
-      　target="_blank"
+      target="_blank"
+      rel="noreferrer noopener"
     >Google アナリティクス利用規約</a>
     <h2>免責事項</h2>
     <p>
@@ -28,18 +29,20 @@
     <p>Naiantic Inc.のブランド/ファンサイトガイドラインに基づいて作成されています。</p>
     <a
       href="https://niantic.helpshift.com/a/ingress/?s=events-and-shop-support&f=brand-and-fan-site-guidelines&p=web"
+      target="_blank"
+      rel="noreferrer noopener"
     >ブランド/ファン サイト ガイドライン</a>
-    <hr>
-    <button type="button" onclick="history.back()">mdtakaoka.infoへ戻る</button>
+    <hr />
+    <button type="button" onClick="history.back()">mdtakaoka.infoへ戻る</button>
   </div>
 </template>
 
 <style scoped>
-body{
-    padding: 1em;
+#policy {
+  margin: 1em;
 }
-h2{
-    padding-top: 1em;
+h2 {
+  padding-top: 1em;
 }
 </style>
 
