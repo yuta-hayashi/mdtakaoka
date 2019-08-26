@@ -5,7 +5,6 @@
       <div v-if="inputStatus">
         <p>AgentNameを入力してください</p>
         <d-form-input v-model="inputText" placeholder="AgentName" required />
-        <d-form-invalid-feedback>{{formMessage}}</d-form-invalid-feedback>
         <p>※ゲーム内の名前を間違えなく入力お願いします。大文字・小文字は区別しません。</p>
         <d-checkbox
           v-model="rsvpCheck"
@@ -28,9 +27,9 @@
         <div id="print-area">
           <QrPass :agentName="name" :kana="kana" :qrcode="qrbase"></QrPass>
           <br />
-          <p>※印刷して切り取ってご利用ください。</p>
-          <p>※名前はすべて大文字アルファベットで表示されています。</p>
-          <p>※□はスタッフ用なので、何も記入しないでください。</p>
+          <p>※ 印刷して切り取ってご利用ください。</p>
+          <p>※ 名前はすべて大文字アルファベットで表示されています。</p>
+          <p>※ □はスタッフ用なので、記入しないでください。</p>
         </div>
 
         <d-button @click="print">印刷する</d-button>
