@@ -22,12 +22,17 @@
     <div class="info">
       <h4>最新情報を更新中⚡</h4>
       <p>
-        このサイトではミッション情報や観光スポットなどを掲載していきます。
+        このサイトではミッション情報や観光スポットなどを掲載しています。
         <br />また、TwitterやTelegramを通じて最新情報をお届けしています！ぜひご活用ください。
       </p>
       <div class="info-btn">
         <a href="https://twitter.com/mdtakaoka" class="navBotton active" target="_blank" rel="noreferrer noopener">Twitterアカウント</a>
         <a href="https://t.me/joinchat/AAAAAFQj7GWHVx469bwPLA" class="navBotton active" target="_blank" rel="noreferrer noopener">Telegramチャネル</a>
+      </div>
+      <br>
+      <p>SNSではハッシュタグをご利用ください！</p>
+      <div class="hasharea">
+        <h2 class="hashtag bg-back">#MD高岡　#mdtakaoka</h2>
       </div>
     </div>
   </div>
@@ -134,6 +139,17 @@ export default {
   width: 90%;
   max-width: 800px;
   margin-bottom: 2em;
+}
+.hasharea{
+  display: flex;
+  justify-content: center;
+}
+.hashtag{
+  color: white;
+  padding: 0.2em;
+  font-weight: 700;
+  font-size: 2em;
+  background-color: red;
 }
 .subtitle {
   color: white;
