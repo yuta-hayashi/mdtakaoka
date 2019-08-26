@@ -6,12 +6,15 @@
         <p>AgentNameを入力してください</p>
         <d-form-input v-model="inputText" placeholder="AgentName" required />
         <p>※ゲーム内の名前を間違えなく入力お願いします。大文字・小文字は区別しません。</p>
-        <d-checkbox
-          v-model="rsvpCheck"
-          name="rsvp-check"
-          value="true"
-        >IngressのMissionDayの<a href="https://events.ingress.com/MissionDay/Takaoka" target="_blank" rel="noreferrer noopener">サイト</a>で参加登録をしました。</d-checkbox>
-        <d-button type="button" @click="generate" size="lg button" :disabled="!rsvpCheck">FASTPASS発行</d-button>
+        <d-checkbox v-model="rsvpCheck" name="rsvp-check" value="true">
+          IngressのMissionDayの
+          <a
+            href="https://events.ingress.com/MissionDay/Takaoka"
+            target="_blank"
+            rel="noreferrer noopener"
+          >サイト</a>で参加登録をしました。
+        </d-checkbox>
+        <d-button type="button" @click="generate" size="lg button" :disabled="!rsvpCheck">QR-PASS 発行</d-button>
       </div>
       <div id="qr-div">
         <QRCanvas :options="options" id="qr-canvas" />
@@ -19,7 +22,9 @@
       <div v-if="check">
         <h4>Agent名は正しいですか？</h4>
         <p>※すべて大文字で表示されています。</p>
-        <h3 class="exo">{{name}}</h3>
+        <div class="nameBox">
+          <h3 class="exo solid">{{name}}</h3>
+        </div>
         <d-button @click="createPass">はい</d-button>
         <d-button onclick="window.location.reload();" theme="secondary">いいえ</d-button>
       </div>
@@ -34,6 +39,7 @@
 
         <d-button @click="print">印刷する</d-button>
         <d-button onclick="window.location.reload();" theme="secondary">クリア</d-button>
+        <p>印刷するボタンが機能場合はページ全体を印刷してください。</p>
       </div>
       <br />
       <br />
@@ -183,6 +189,14 @@ export default {
   width: 90%;
   max-width: 400px;
   padding: 2em;
+}
+.nameBox {
+  display: flex;
+  margin:1em;
+}
+.nameBox h3 {
+  border: solid 1px gray;
+  padding: 5px;
 }
 .exo {
   font-family: "Exo", sans-serif !important;
