@@ -37,6 +37,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      meta: [{ hid: "robots", name: "robots", content: "noindex" }]
+    };
+  }
+};
+</script>
+
 <style scoped>
 #policy {
   margin: 1em;

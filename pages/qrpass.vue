@@ -1,6 +1,7 @@
 <template>
   <no-ssr>
     <div class="content">
+       <d-alert theme="warning" show><b>このページは現在スタッフのみ利用可能です</b>。</d-alert>
       <h2 class="title">QR-PASS 発行</h2>
       <div v-if="inputStatus">
         <p>AgentNameを入力してください</p>
