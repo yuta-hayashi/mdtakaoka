@@ -40,7 +40,7 @@
 
         <d-button @click="print">印刷する</d-button>
         <d-button onclick="window.location.reload();" theme="secondary">クリア</d-button>
-        <p>印刷するボタンが機能場合はページ全体を印刷してください。</p>
+        <p>※ 印刷するボタンが機能しない場合はページ全体を印刷してください。</p>
       </div>
       <br />
       <br />
