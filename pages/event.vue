@@ -6,9 +6,9 @@
     </div>
     <div class="card-list">
       <d-card v-for="item in posts" :key="item.sys.id" class="event-card">
-        <d-card-img
+        <img
           :src="item.fields.cover.fields.file.url + '?fit=thumb&f=top&h=270&w=500&q=80'"
-          top
+          class="card-img-top"
         />
         <d-card-body :title="item.fields.title">
           <div v-html="item.fields.content" class="post"></div>
@@ -30,8 +30,9 @@ const options = {
       `<a href=${
         node.data.uri
       } target="_blank" rel="noreferrer noopener">${next(node.content)}</a>`,
-       [BLOCKS.EMBEDDED_ASSET]: (node) =>
-      `<img src="${node.data.target.fields.file.url+'?fm=jpg&q=50'}" class="post-img"/>`
+    [BLOCKS.EMBEDDED_ASSET]: node =>
+      `<img src="${node.data.target.fields.file.url +
+        "?fm=jpg&q=50"}" class="post-img"/>`
   }
 };
 
@@ -44,7 +45,7 @@ export default {
       // fetch all blog posts sorted by creation date
       client.getEntries({
         content_type: "event",
-        order: "sys.updatedAt"
+        order: "fields.ordernumber"
       })
     ])
       .then(([posts]) => {
@@ -84,6 +85,9 @@ export default {
 }
 .post-img {
   width: 100%;
+}
+.card-img-top {
+  border-radius: 10px 10px 0 0;
 }
 @media (max-width: 875px) {
   .event-card {

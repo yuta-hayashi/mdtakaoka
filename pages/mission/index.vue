@@ -5,13 +5,13 @@
       <p>ミッションの見どころを紹介しています。</p>
     </div>
     <div class="card-list">
-      <EventCards
+      <MissionCards
         v-for="card in posts"
         :key="card.sys.id"
         :cover="card.fields.cover.fields.file.url"
         :title="card.fields.title"
         :body="card.fields.article"
-      ></EventCards>
+      ></MissionCards>
     </div>
   </div>
 </template>
@@ -20,7 +20,7 @@
 import { createClient } from "~/plugins/contentful.js";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { INLINES, BLOCKS } from "@contentful/rich-text-types";
-import EventCards from "~/components/EventCards.vue";
+import MissionCards from "~/components/MissionCards.vue";
 
 const client = createClient();
 const options = {
@@ -63,7 +63,7 @@ export default {
       })
       .catch(console.error);
   },
-  components: { EventCards }
+  components: { MissionCards }
 };
 </script>
 
