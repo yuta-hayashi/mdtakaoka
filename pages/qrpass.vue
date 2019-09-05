@@ -1,7 +1,9 @@
 <template>
   <no-ssr>
     <div class="content">
-       <d-alert theme="warning" show><b>このページは現在スタッフのみ利用可能です</b>。</d-alert>
+      <d-alert theme="warning" show>
+        <b>このページは現在スタッフのみ利用可能です</b>。
+      </d-alert>
       <h2 class="title">QR-PASS 発行</h2>
       <div v-if="inputStatus">
         <p>AgentNameを入力してください</p>
@@ -111,7 +113,11 @@ function putKana(inputText) {
   let result = alfaToHira[inputText[0]];
   for (let i = 1; i < inputText.length; i++) {
     console.log(inputText[i]);
-    result += "・" + alfaToHira[inputText[i]];
+    if (alfaToHira[inputText[i]] == undefined) {
+      result += "・？";
+    } else {
+      result += "・" + alfaToHira[inputText[i]];
+    }
   }
   return result;
 }
@@ -193,7 +199,7 @@ export default {
 }
 .nameBox {
   display: flex;
-  margin:1em;
+  margin: 1em;
 }
 .nameBox h3 {
   border: solid 1px gray;
