@@ -40,7 +40,9 @@
       </div>
       <div v-if="status">
         <div id="print-area">
-          <QrPass :agentName="name" :kana="kana" :qrcode="qrbase"></QrPass>
+        <div id="qr-pass">
+            <QrPass :agentName="name" :kana="kana" :qrcode="qrbase"></QrPass>
+        </div>
           <br />
           <p>※ 印刷して切り取ってご利用ください。</p>
           <p>※ 名前はすべて大文字アルファベットで表示されています。</p>
@@ -170,7 +172,7 @@ export default {
       let qrCanvas = document.getElementById("qr-canvas");
       this.qrbase = qrCanvas.toDataURL("image/png");
       this.$axios.$get(
-        "https://script.google.com/macros/s/AKfycbyQN0T1bNksA1bYMw4yEb1G2Cs_Xh5EhNkBbCh1astLXUUYl78/exec",
+        "https://script.google.com/macros/s/AKfycbzSRsHBF2jMhSjEwUUYTn1dWQtr8jLHDoV4_L_m/exec",
         {
           params: {
             name: this.name
@@ -207,14 +209,6 @@ export default {
 #qr-canvas {
   display: none;
 }
-#fast-pass {
-  color: black;
-  text-align: center;
-  border: solid 2px black;
-  width: 90%;
-  max-width: 400px;
-  padding: 2em;
-}
 .nameBox {
   display: flex;
   margin: 1em;
@@ -223,14 +217,6 @@ export default {
   border: solid 1px gray;
   padding: 5px;
 }
-.exo {
-  font-family: "Exo", sans-serif !important;
-  font-style: inherit;
-  font-weight: normal;
-}
-.italic {
-  font-style: italic;
-}
 @media print {
   #__layout > *:not(#print-area) {
     display: none;
@@ -238,28 +224,14 @@ export default {
   .content {
     padding: 6em 3em;
   }
-  #fast-pass {
-    color: black;
-    text-align: center;
-    border: solid 2px black;
-    width: 1000mm !important;
-    padding: 2em;
-  }
-  @import url("https://fonts.googleapis.com/css?family=Exo&display=swap");
-  .exo {
-    font-family: "Exo", sans-serif !important;
-    font-style: inherit;
-    font-weight: normal;
-  }
   p {
     font-size: 1em;
   }
+  #qr-pass{
+    width: 150mm;
+  }
   .none {
     display: none;
-  }
-
-  .italic {
-    font-style: italic;
   }
 }
 </style>
