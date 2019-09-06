@@ -1,35 +1,42 @@
 <template>
   <no-ssr>
     <div class="content">
-      <d-alert theme="warning" show>
-        <b>このページは現在スタッフのみ利用可能です</b>。
-      </d-alert>
-      <h2 class="title">QR-PASS 発行</h2>
-      <div v-if="inputStatus">
-        <p>AgentNameを入力してください</p>
-        <d-form-input v-model="inputText" placeholder="AgentName" required />
-        <p>※ゲーム内の名前を間違えなく入力お願いします。大文字・小文字は区別しません。</p>
-        <d-checkbox v-model="rsvpCheck" name="rsvp-check" value="true">
-          IngressのMissionDayの
-          <a
-            href="https://events.ingress.com/MissionDay/Takaoka"
-            target="_blank"
-            rel="noreferrer noopener"
-          >サイト</a>で参加登録をしました。
-        </d-checkbox>
-        <d-button type="button" @click="generate" size="lg button" :disabled="!rsvpCheck">QR-PASS 発行</d-button>
-      </div>
-      <div id="qr-div">
-        <QRCanvas :options="options" id="qr-canvas" />
-      </div>
-      <div v-if="check">
-        <h4>Agent名は正しいですか？</h4>
-        <p>※すべて大文字で表示されています。</p>
-        <div class="nameBox">
-          <h3 class="exo solid">{{name}}</h3>
+      <div class="none">
+        <d-alert theme="warning" show>
+          <b>このページは現在スタッフのみ利用可能です</b>。
+        </d-alert>
+        <h2 class="title">QR-PASS 発行</h2>
+        <div v-if="inputStatus">
+          <p>AgentNameを入力してください</p>
+          <d-form-input v-model="inputText" placeholder="AgentName" required />
+          <p>※ゲーム内の名前を間違えなく入力お願いします。大文字・小文字は区別しません。</p>
+          <d-checkbox v-model="rsvpCheck" name="rsvp-check" value="true">
+            IngressのMissionDayの
+            <a
+              href="https://events.ingress.com/MissionDay/Takaoka"
+              target="_blank"
+              rel="noreferrer noopener"
+            >サイト</a>で参加登録をしました。
+          </d-checkbox>
+          <d-button
+            type="button"
+            @click="generate"
+            size="lg button"
+            :disabled="!rsvpCheck"
+          >QR-PASS 発行</d-button>
         </div>
-        <d-button @click="createPass">はい</d-button>
-        <d-button onclick="window.location.reload();" theme="secondary">いいえ</d-button>
+        <div id="qr-div">
+          <QRCanvas :options="options" id="qr-canvas" />
+        </div>
+        <div v-if="check">
+          <h4>Agent名は正しいですか？</h4>
+          <p>※すべて大文字で表示されています。</p>
+          <div class="nameBox">
+            <h3 class="exo solid">{{name}}</h3>
+          </div>
+          <d-button @click="createPass">はい</d-button>
+          <d-button onclick="window.location.reload();" theme="secondary">いいえ</d-button>
+        </div>
       </div>
       <div v-if="status">
         <div id="print-area">
@@ -39,10 +46,11 @@
           <p>※ 名前はすべて大文字アルファベットで表示されています。</p>
           <p>※ □はスタッフ用なので、記入しないでください。</p>
         </div>
-
-        <d-button @click="print">印刷する</d-button>
-        <d-button onclick="window.location.reload();" theme="secondary">クリア</d-button>
-        <p>※ 印刷するボタンが機能しない場合はページ全体を印刷してください。</p>
+        <div class="none">
+          <d-button @click="print">印刷する</d-button>
+          <d-button onclick="window.location.reload();" theme="secondary">クリア</d-button>
+          <p>※ 印刷するボタンが機能しない場合はページ全体を印刷してください。</p>
+        </div>
       </div>
       <br />
       <br />
@@ -174,7 +182,8 @@ export default {
       this.status = true;
     },
     print() {
-      this.$htmlToPaper("print-area");
+      //this.$htmlToPaper("print-area");
+      window.print();
     }
   },
   mounted() {
@@ -229,9 +238,6 @@ export default {
   .content {
     padding: 6em 3em;
   }
-  .exo {
-    color: red;
-  }
   #fast-pass {
     color: black;
     text-align: center;
@@ -246,7 +252,10 @@ export default {
     font-weight: normal;
   }
   p {
-    font-size: 0.8em;
+    font-size: 1em;
+  }
+  .none {
+    display: none;
   }
 
   .italic {
