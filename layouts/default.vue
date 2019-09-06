@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Navigation />
+    <Navigation class="none"/>
     <nuxt />
-    <Footer />
+    <Footer class="none" />
   </div>
 </template>
 
@@ -64,5 +64,10 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+@media print {
+  .none {
+    display: none;
+  }
 }
 </style>
