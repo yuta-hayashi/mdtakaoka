@@ -61,6 +61,7 @@ import { QRCanvas } from "qrcanvas-vue";
 import Vue from "vue";
 import VueHtmlToPaper from "vue-html-to-paper";
 import QrPass from "~/components/QrPass";
+import axios from "@nuxtjs/axios";
 
 const printOptions = {
   name: "_blank",
@@ -160,6 +161,14 @@ export default {
     createPass() {
       let qrCanvas = document.getElementById("qr-canvas");
       this.qrbase = qrCanvas.toDataURL("image/png");
+      this.$axios.$get(
+        "https://script.google.com/macros/s/AKfycbyQN0T1bNksA1bYMw4yEb1G2Cs_Xh5EhNkBbCh1astLXUUYl78/exec",
+        {
+          params: {
+            name: this.name
+          }
+        }
+      );
       this.name = this.name;
       this.check = false;
       this.status = true;
