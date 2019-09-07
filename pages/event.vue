@@ -10,6 +10,9 @@
           :src="item.fields.cover.fields.file.url + '?fit=thumb&f=top&h=270&w=500&q=80'"
           class="card-img-top"
         />
+        <div class="title-badge">
+          <d-badge v-if="item.fields.badge" pill :theme="item.fields.badge[0]">{{item.fields.badge[1]}}</d-badge>
+        </div>
         <d-card-body :title="item.fields.title">
           <div v-html="item.fields.content" class="post"></div>
         </d-card-body>
@@ -58,7 +61,7 @@ export default {
             options
           );
         });
-        //console.log(posts.items);
+        console.log(posts.items);
         return {
           posts: posts.items
         };
@@ -88,6 +91,10 @@ export default {
 }
 .card-img-top {
   border-radius: 10px 10px 0 0;
+}
+.title-badge{
+  padding: 10px 0px 0px 30px;
+  margin-bottom: -25px;
 }
 @media (max-width: 875px) {
   .event-card {
