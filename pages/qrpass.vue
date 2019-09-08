@@ -7,8 +7,8 @@
         </d-alert>
         <h2 class="title">QR-PASS 発行</h2>
         <div v-if="inputStatus">
-          <p>AgentNameを入力してください</p>
-          <d-form-input v-model="inputText" placeholder="AgentName" required />
+          <p>AgentNameを<b>半角英数字</b>で入力してください</p>
+          <d-form-input :state="valid" v-model="inputText" placeholder="AgentName" required />
           <p>※ゲーム内の名前を間違えなく入力お願いします。大文字・小文字は区別しません。</p>
           <d-checkbox v-model="rsvpCheck" name="rsvp-check" value="true">
             IngressのMissionDayの
@@ -22,7 +22,7 @@
             type="button"
             @click="generate"
             size="lg button"
-            :disabled="!rsvpCheck"
+            :disabled="!rsvpCheck||!valid"
           >QR-PASS 発行</d-button>
         </div>
         <div id="qr-div">
@@ -40,9 +40,9 @@
       </div>
       <div v-if="status">
         <div id="print-area">
-        <div id="qr-pass">
+          <div id="qr-pass">
             <QrPass :agentName="name" :kana="kana" :qrcode="qrbase"></QrPass>
-        </div>
+          </div>
           <br />
           <p>※ 印刷して切り取ってご利用ください。</p>
           <p>※ 名前はすべて大文字アルファベットで表示されています。</p>
@@ -72,6 +72,7 @@ import Vue from "vue";
 import VueHtmlToPaper from "vue-html-to-paper";
 import QrPass from "~/components/QrPass";
 import axios from "@nuxtjs/axios";
+import ga from "@nuxtjs/google-analytics";
 
 const printOptions = {
   name: "_blank",
@@ -156,9 +157,20 @@ export default {
       status: false
     };
   },
+  computed: {
+    valid: function() {
+      if (this.inputText == "") {
+        return null;
+      } else if (this.inputText.match(/^[A-Za-z0-9]*$/)) {
+        return true;
+      } else {
+        return false
+      }
+    }
+  },
   methods: {
     generate() {
-      console.log(this.options.data);
+      //console.log(this.options.data);
       this.options = Object.assign({}, this.options, {
         data: this.inputText
       });
@@ -171,17 +183,18 @@ export default {
     createPass() {
       let qrCanvas = document.getElementById("qr-canvas");
       this.qrbase = qrCanvas.toDataURL("image/png");
-      this.$axios.$get(
+      /*await this.$axios.$get(
         "https://script.google.com/macros/s/AKfycbzSRsHBF2jMhSjEwUUYTn1dWQtr8jLHDoV4_L_m/exec",
         {
           params: {
             name: this.name
           }
         }
-      );
-      this.name = this.name;
+      );*/
+      //this.name = this.name;
       this.check = false;
       this.status = true;
+      this.$ga.event("Button", "qr-pass", this.name);
     },
     print() {
       //this.$htmlToPaper("print-area");
@@ -227,7 +240,7 @@ export default {
   p {
     font-size: 1em;
   }
-  #qr-pass{
+  #qr-pass {
     width: 150mm;
   }
   .none {
