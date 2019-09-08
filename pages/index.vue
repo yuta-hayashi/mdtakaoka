@@ -8,11 +8,11 @@
     </div>
 
     <div v-for="item in posts" :key="item.sys.id" class="f-area">
-      <div class="f-content">
+      <div class="f-content center">
         <img :src="item.fields.cover.fields.file.url+'?fm=jpg&q=80'" class="f-img" />
       </div>
       <div class="f-content">
-        <h2>{{item.fields.title}}</h2>
+        <h2 class="center title">{{item.fields.title}}</h2>
         <div v-html="item.fields.content" class="post"></div>
       </div>
     </div>
@@ -26,13 +26,23 @@
         <br />また、TwitterやTelegramを通じて最新情報をお届けしています！ぜひご活用ください。
       </p>
       <div class="info-btn">
-        <a href="https://twitter.com/mdtakaoka" class="navBotton active" target="_blank" rel="noreferrer noopener">Twitterアカウント</a>
-        <a href="https://t.me/joinchat/AAAAAFQj7GWHVx469bwPLA" class="navBotton active" target="_blank" rel="noreferrer noopener">Telegramチャネル</a>
+        <a
+          href="https://twitter.com/mdtakaoka"
+          class="navBotton active"
+          target="_blank"
+          rel="noreferrer noopener"
+        >Twitterアカウント</a>
+        <a
+          href="https://t.me/joinchat/AAAAAFQj7GWHVx469bwPLA"
+          class="navBotton active"
+          target="_blank"
+          rel="noreferrer noopener"
+        >Telegramチャネル</a>
       </div>
-      <br>
+      <br />
       <p>SNSではハッシュタグをご利用ください！</p>
       <div class="hasharea">
-        <h2 class="hashtag bg-back">#MD高岡　#mdtakaoka</h2>
+        <h2 class="hashtag bg-back">#MD高岡 #mdtakaoka</h2>
       </div>
     </div>
   </div>
@@ -51,8 +61,9 @@ const options = {
       `<a href=${
         node.data.uri
       } target="_blank" rel="noreferrer noopener">${next(node.content)}</a>`,
-       [BLOCKS.EMBEDDED_ASSET]: (node) =>
-      `<img src="${node.data.target.fields.file.url+'?fm=jpg&q=50'}" class="post-img"/>`
+    [BLOCKS.EMBEDDED_ASSET]: node =>
+      `<img src="${node.data.target.fields.file.url +
+        "?fm=jpg&q=50"}" class="post-img"/>`
   }
 };
 
@@ -140,11 +151,11 @@ export default {
   max-width: 800px;
   margin-bottom: 2em;
 }
-.hasharea{
+.hasharea {
   display: flex;
   justify-content: center;
 }
-.hashtag{
+.hashtag {
   color: white;
   padding: 0.2em;
   font-weight: 700;
@@ -238,6 +249,13 @@ export default {
   fill: white;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 }
+.title {
+  background-image: linear-gradient(to right,#4facfe, #3fc35f);
+  background-repeat: no-repeat;
+  background-size: 100% 10%;
+  background-position: bottom;
+}
+.title
 @keyframes flash {
   50% {
     opacity: 0.3;
@@ -253,6 +271,9 @@ export default {
     height: 70%;
     padding: 0.5em;
     max-width: 90%;
+  }
+  .center {
+    text-align: center;
   }
 }
 </style>
