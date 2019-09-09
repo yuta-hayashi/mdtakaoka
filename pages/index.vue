@@ -255,7 +255,6 @@ export default {
   background-size: 100% 10%;
   background-position: bottom;
 }
-.title
 @keyframes flash {
   50% {
     opacity: 0.3;
