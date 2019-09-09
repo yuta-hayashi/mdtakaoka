@@ -6,6 +6,11 @@
       <h2 class="subtitle">北陸初となるMissionDayが富山県高岡市で開催決定！</h2>
       <h3 id="counter">開催まで、あと{{ days }}日</h3>
     </div>
+    <n-link to="/qrpass" class="f-area">
+      <d-card class="floating">
+        <d-card-body><img src="~/assets/img/ticket-icon.png" style="width:40px;"/>チェックインに便利なQR-PASSの発行はお済みですか？</d-card-body>
+      </d-card>
+    </n-link>
 
     <div v-for="item in posts" :key="item.sys.id" class="f-area">
       <div class="f-content center">
@@ -250,10 +255,22 @@ export default {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 }
 .title {
-  background-image: linear-gradient(to right,#4facfe, #3fc35f);
+  background-image: linear-gradient(to right, #4facfe, #3fc35f);
   background-repeat: no-repeat;
   background-size: 100% 10%;
   background-position: bottom;
+}
+.floating {
+  color: rgb(65, 65, 65);
+  animation: floatings 2s ease infinite;
+}
+@keyframes floatings {
+  50%{
+  box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.5),
+    0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+    0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12),
+    0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+  }
 }
 @keyframes flash {
   50% {
