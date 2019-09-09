@@ -1,5 +1,6 @@
 <template>
-  <div>
+<div class="containerb">
+    <div>
     <header>
       <h1>Ingressをダウンロード</h1>
       <img src="~/assets/img/ingress.png" class="prime" />
@@ -18,33 +19,14 @@
       <a href="https://mdtakaoka.info" class="btn-gradient-radius">MD高岡特設サイトへ</a>
     </div>
 
-    <!-- Start footer -->
-    <footer id="footer">
-      <div class="container">
-        <div class="mu-footer-area">
-          <div class="mu-footer-bottom">
-            <p class="mu-copy-right">
-              &copy;mdtakaoka.info
-              All right reserved.
-              <a
-                href="https://mdtakaoka.info/policy.html"
-                target="_blank"
-                style="font-weight: 0;"
-              >
-                privacy
-                policy
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
   </div>
+</div>
 </template>
 
 <style scoped>
-body {
-  background-color: #0a0203;
+
+.containerb {
+  background-color: #0a0203 !important;
   color: aliceblue;
 }
 
