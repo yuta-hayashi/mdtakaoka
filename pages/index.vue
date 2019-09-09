@@ -8,7 +8,9 @@
     </div>
     <n-link to="/qrpass" class="f-area">
       <d-card class="floating">
-        <d-card-body><img src="~/assets/img/ticket-icon.png" style="width:40px;"/>チェックインに便利なQR-PASSの発行はお済みですか？</d-card-body>
+        <d-card-body>
+          <img src="~/assets/img/ticket-icon.png" style="width:40px;" />チェックインに便利なQR-PASSの発行はお済みですか？
+        </d-card-body>
       </d-card>
     </n-link>
 
@@ -47,7 +49,18 @@
       <br />
       <p>SNSではハッシュタグをご利用ください！</p>
       <div class="hasharea">
-        <h2 class="hashtag bg-back">#MD高岡 #mdtakaoka</h2>
+        <h2 class="hashtag bg-back">
+          <a
+            href="https://twitter.com/search?q=%23md高岡"
+            target="_blank"
+            rel="noreferrer noopener"
+          >#MD高岡</a>&nbsp;
+           <a
+            href="https://twitter.com/search?q=%23mdtakaoka"
+            target="_blank"
+            rel="noreferrer noopener"
+          >#mdtakaoka</a>
+        </h2>
       </div>
     </div>
   </div>
@@ -161,11 +174,12 @@ export default {
   justify-content: center;
 }
 .hashtag {
-  color: white;
   padding: 0.2em;
   font-weight: 700;
   font-size: 2em;
-  background-color: red;
+}
+.hashtag a {
+  color: white;
 }
 .subtitle {
   color: white;
@@ -265,11 +279,11 @@ export default {
   animation: floatings 2s ease infinite;
 }
 @keyframes floatings {
-  50%{
-  box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.5),
-    0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
-    0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12),
-    0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+  50% {
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.5),
+      0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+      0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12),
+      0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
   }
 }
 @keyframes flash {
