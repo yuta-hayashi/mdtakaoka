@@ -2,14 +2,14 @@
   <no-ssr>
     <div class="content">
       <div class="none">
-        <d-alert theme="warning" show>
-          <b>このページは現在スタッフのみ利用可能です</b>。
-        </d-alert>
         <h2 class="title">QR-PASS 発行</h2>
         <div v-if="inputStatus">
-          <p>AgentNameを<b>半角英数字</b>で入力してください</p>
+          <p>
+            エージェント名を
+            <b>半角英数字</b>で入力してください。
+          </p>
           <d-form-input :state="valid" v-model="inputText" placeholder="AgentName" required />
-          <p>※ゲーム内の名前を間違えなく入力お願いします。大文字・小文字は区別しません。</p>
+          <p>※Ingress内の名前を間違えなく入力お願いします。大文字・小文字は区別しません。最大15文字</p>
           <d-checkbox v-model="rsvpCheck" name="rsvp-check" value="true">
             IngressのMissionDayの
             <a
@@ -55,32 +55,21 @@
         </div>
       </div>
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div class="none">
+        <h3>QR-PASSとは?🤔</h3>
+        <p>
+          今回のMissionDay高岡ではQRコードを使ったチェックアウトができます。
+          事前にエージェント名の入ったQRコード印刷しておくことによって、素早く正確にチェックアウトができるようになりますので、ご協力いただけると幸いです。
+          <br />詳しくはヘルプをご覧ください。
+        </p>
+      </div>
     </div>
   </no-ssr>
 </template>
 
 <script>
 import { QRCanvas } from "qrcanvas-vue";
-import Vue from "vue";
-import VueHtmlToPaper from "vue-html-to-paper";
 import QrPass from "~/components/QrPass";
-import axios from "@nuxtjs/axios";
-import ga from "@nuxtjs/google-analytics";
-
-const printOptions = {
-  name: "_blank",
-  specs: ["fullscreen=yes", "titlebar=yes", "scrollbars=yes"],
-  styles: ["/pass.css"]
-};
-
-Vue.use(VueHtmlToPaper, printOptions);
 
 const alfaToHira = {
   A: "エー",
@@ -161,10 +150,12 @@ export default {
     valid: function() {
       if (this.inputText == "") {
         return null;
+      } else if (this.inputText.length > 15) {
+        return false;
       } else if (this.inputText.match(/^[A-Za-z0-9]*$/)) {
         return true;
       } else {
-        return false
+        return false;
       }
     }
   },
@@ -183,15 +174,6 @@ export default {
     createPass() {
       let qrCanvas = document.getElementById("qr-canvas");
       this.qrbase = qrCanvas.toDataURL("image/png");
-      /*await this.$axios.$get(
-        "https://script.google.com/macros/s/AKfycbzSRsHBF2jMhSjEwUUYTn1dWQtr8jLHDoV4_L_m/exec",
-        {
-          params: {
-            name: this.name
-          }
-        }
-      );*/
-      //this.name = this.name;
       this.check = false;
       this.status = true;
       this.$ga.event("Button", "qr-pass", this.name);

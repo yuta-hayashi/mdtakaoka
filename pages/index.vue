@@ -6,13 +6,13 @@
       <h2 class="subtitle">北陸初となるMissionDayが富山県高岡市で開催決定！</h2>
       <h3 id="counter">開催まで、あと{{ days }}日</h3>
     </div>
-    <!--<n-link to="/qrpass" class="f-area">
+    <n-link to="/qrpass" class="f-area">
       <d-card class="floating">
         <d-card-body>
           <img src="~/assets/img/ticket-icon.png" style="width:40px;" />チェックインに便利なQR-PASSの発行はお済みですか？
         </d-card-body>
       </d-card>
-    </n-link>-->
+    </n-link>
 
     <div v-for="item in posts" :key="item.sys.id" class="f-area">
       <div class="f-content center">
@@ -55,7 +55,7 @@
             target="_blank"
             rel="noreferrer noopener"
           >#MD高岡</a>&nbsp;
-           <a
+          <a
             href="https://twitter.com/search?q=%23mdtakaoka"
             target="_blank"
             rel="noreferrer noopener"
