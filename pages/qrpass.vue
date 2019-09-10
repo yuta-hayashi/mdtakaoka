@@ -5,11 +5,12 @@
         <h2 class="title">QR-PASS 発行</h2>
         <div v-if="inputStatus">
           <p>
-            エージェント名を
-            <b>半角英数字</b>で入力してください。
+            エージェント名(Ingress内の名前)を
+            <b>半角英数字</b>で間違えなく入力お願いします。大文字・小文字は区別しません。
           </p>
           <d-form-input :state="valid" v-model="inputText" placeholder="AgentName" required />
-          <p>※Ingress内の名前を間違えなく入力お願いします。大文字・小文字は区別しません。最大15文字</p>
+          <small v-if="valid==false" style="color:red;">最大15文字で半角英数字のみ入力してください。</small>
+          <br />
           <d-checkbox v-model="rsvpCheck" name="rsvp-check" value="true">
             IngressのMissionDayの
             <a
@@ -43,6 +44,7 @@
           <div id="qr-pass">
             <QrPass :agentName="name" :kana="kana" :qrcode="qrbase"></QrPass>
           </div>
+          <div id="space"></div>
           <br />
           <p>※ 印刷して切り取ってご利用ください。</p>
           <p>※ 名前はすべて大文字アルファベットで表示されています。</p>
@@ -179,7 +181,6 @@ export default {
       this.$ga.event("Button", "qr-pass", this.name);
     },
     print() {
-      //this.$htmlToPaper("print-area");
       window.print();
     }
   },
@@ -211,6 +212,15 @@ export default {
 .nameBox h3 {
   border: solid 1px gray;
   padding: 5px;
+}
+@media (max-width: 500px) {
+  #qr-pass {
+    margin: 2em;
+    transform: rotate(90deg);
+  }
+  #space {
+    height: 350px;
+  }
 }
 @media print {
   #__layout > *:not(#print-area) {
