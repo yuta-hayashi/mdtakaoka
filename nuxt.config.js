@@ -11,7 +11,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate:"%s MissionDay 高岡",
+    titleTemplate: "%s MissionDay 高岡",
     htmlAttrs: {
       lang: 'ja'
     },
@@ -28,7 +28,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {rel:'apple-touch-startup-image',href:'/icon.png'}
+      { rel: 'apple-touch-startup-image', href: '/icon.png' }
     ]
   },
   /*

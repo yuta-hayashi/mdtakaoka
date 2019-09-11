@@ -276,14 +276,6 @@ export default {
 }
 .floating {
   color: rgb(65, 65, 65);
-  animation: floatings 2s ease infinite;
-}
-@keyframes floatings {
-  50% {
-    box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.5),
-      0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12),
-      0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
-  }
 }
 @keyframes flash {
   50% {
