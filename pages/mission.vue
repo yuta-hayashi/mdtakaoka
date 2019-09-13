@@ -9,6 +9,7 @@
         v-for="card in posts"
         :key="card.sys.id"
         :cover="card.fields.cover.fields.file.url"
+        :medalImage="[card.fields.medalImage?card.fields.medalImage.fields.file.url:'']"
         :title="card.fields.title"
         :body="card.fields.article"
       ></MissionCards>
@@ -56,7 +57,7 @@ export default {
             options
           );
         });
-        //console.log(posts.items);
+        console.log(posts.items);
         return {
           posts: posts.items
         };
