@@ -4,7 +4,7 @@
     <d-card-body>
       <img
         v-if="medalImage!=''"
-        :src="medalImage+'?fit=thumb&r=180&f=top&h=100&w=100&q=80'"
+        :src="medalImage+'?r=180&h=100&w=100&q=80'"
         class="card-medal"
       />
       <h4 class="card-title">{{title}}</h4>
@@ -21,7 +21,7 @@ export default {
       required: false
     },
     medalImage: {
-      type: String,
+      type: Array,
       required: false
     },
     title: {
@@ -54,6 +54,7 @@ export default {
   display: block;
   margin-left: auto;
   margin-top: -5em;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
 }
 @media (max-width: 875px) {
   .card {
