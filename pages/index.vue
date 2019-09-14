@@ -6,13 +6,15 @@
       <h2 class="subtitle">北陸初となるMissionDayが富山県高岡市で開催決定！</h2>
       <h3 id="counter">開催まで、あと{{ days }}日</h3>
     </div>
-    <n-link to="/qrpass" class="f-area">
-      <d-card class="floating">
-        <d-card-body>
-          <img src="~/assets/img/ticket-icon.png" style="width:40px;" />QR-PASSの発行はお済みですか？
-        </d-card-body>
+    <div class="f-area">
+      <d-card>
+        <n-link to="/qrpass">
+          <d-card-body class="floating">
+            <img src="~/assets/img/ticket-icon.png" style="width:40px;" />QR-PASSの発行はお済みですか？
+          </d-card-body>
+        </n-link>
       </d-card>
-    </n-link>
+    </div>
 
     <div v-for="item in posts" :key="item.sys.id" class="f-area">
       <div class="f-content center">
@@ -177,6 +179,7 @@ export default {
   padding: 0.2em;
   font-weight: 700;
   font-size: 2em;
+  border-radius: 0.2em;
 }
 .hashtag a {
   color: white;
