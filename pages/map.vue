@@ -13,9 +13,10 @@
       <h3>■PDFをダウンロードする</h3>
       <p>ダウンロードはこちら↓<br>
         <a href="/files/mdtakaoka-map.pdf" target="_blank" rel="noopener noreferrer">
-          <b>MissionDayTakaoka マップPDF</b>
+          <b>MissionDayTakaoka マップPDF [5.43MB]</b>
         </a>
       </p>
+      <p><small>Wi-Fi環境もしくは有線通信でのダウンロード推奨</small></p>
       <p>※<n-link to="/qrpass">QR-PASS</n-link>を印刷された方はマップへのエージェント名の記入は不要です。</p>
     </div>
     <div class="contents">
