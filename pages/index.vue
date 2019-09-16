@@ -10,7 +10,9 @@
       <d-card>
         <n-link to="/qrpass">
           <d-card-body class="floating">
-            <img src="~/assets/img/ticket-icon.png" style="width:40px;" />QR-PASSの発行はこちら
+            <img src="~/assets/img/ticket-icon.png" style="width:40px;" />
+            <b>QR-PASSの発行はこちら</b>
+            <p>QR-PASSで受付すると<u>特典</u>が貰えます。</p>
           </d-card-body>
         </n-link>
       </d-card>
@@ -22,7 +24,9 @@
           rel="noreferrer noopener"
         >
           <d-card-body class="floating">
-            <img src="~/assets/img/g-photos.png" style="width:40px;" />GooglePhotos共有アルバム
+            <img src="~/assets/img/g-photos.png" style="width:40px;" />
+            <b>GooglePhotos共有アルバム</b>
+            <p>誰でも写真の閲覧・追加ができます。</p>
           </d-card-body>
         </a>
       </d-card>
