@@ -6,37 +6,26 @@
       <h2 class="subtitle">北陸初となるMissionDayが富山県高岡市で開催決定！</h2>
       <h3 id="counter">開催まで、あと{{ days }}日</h3>
     </div>
-    <div>
-      <carousel
-        :perPageCustom="[[320, 1], [768, 2]]"
-        :autoplay="true"
-        :loop="true"
-        :pagination-padding="5"
-        :autoplay-timeout="4000"
-      >
-        <slide>
-          <d-card>
-            <n-link to="/qrpass">
-              <d-card-body class="floating">
-                <img src="~/assets/img/ticket-icon.png" style="width:40px;" />QR-PASSの発行はこちら
-              </d-card-body>
-            </n-link>
-          </d-card>
-        </slide>
-        <slide>
-          <d-card>
-            <a
-              href="https://photos.app.goo.gl/QXryWp6oUE1yT4Ro9"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <d-card-body class="floating">
-                <img src="~/assets/img/g-photos.png" style="width:40px;" />GooglePhotos共有アルバム
-              </d-card-body>
-            </a>
-          </d-card>
-        </slide>
-      </carousel>
+    <div class="f-area">
+      <d-card>
+        <n-link to="/qrpass">
+          <d-card-body class="floating">
+            <img src="~/assets/img/ticket-icon.png" style="width:40px;" />QR-PASSの発行はこちら
+          </d-card-body>
+        </n-link>
+      </d-card>
+
+      <d-card>
+        <a
+          href="https://photos.app.goo.gl/QXryWp6oUE1yT4Ro9"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <d-card-body class="floating">
+            <img src="~/assets/img/g-photos.png" style="width:40px;" />GooglePhotos共有アルバム
+          </d-card-body>
+        </a>
+      </d-card>
     </div>
 
     <div v-for="item in posts" :key="item.sys.id" class="f-area">
@@ -96,8 +85,6 @@ import moment from "moment";
 import { createClient } from "~/plugins/contentful.js";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { INLINES, BLOCKS } from "@contentful/rich-text-types";
-import Carousel from "vue-carousel/src/Carousel.vue";
-import Slide from "vue-carousel/src/Slide.vue";
 
 const client = createClient();
 const options = {
@@ -148,10 +135,6 @@ export default {
         }
       ]
     };
-  },
-  components: {
-    Carousel,
-    Slide
   },
   computed: {
     days: function() {
@@ -328,8 +311,8 @@ export default {
 }
 @media (max-width: 1170px) {
   .VueCarousel {
-  margin: 0;
-}
+    margin: 0;
+  }
   .f-area {
     justify-content: center;
     padding: 0;
