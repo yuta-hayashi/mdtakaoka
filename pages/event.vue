@@ -61,7 +61,7 @@ export default {
             options
           );
         });
-        console.log(posts.items);
+        //console.log(posts.items);
         return {
           posts: posts.items
         };
