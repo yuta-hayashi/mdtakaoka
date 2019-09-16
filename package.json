@@ -24,6 +24,7 @@
     "qrcanvas-vue": "^2.0.3",
     "qrcode.vue": "^1.6.2",
     "shards-vue": "^1.0.7",
+    "vue-carousel": "^0.18.0",
     "vue-html-to-paper": "^1.1.0"
   },
   "devDependencies": {
