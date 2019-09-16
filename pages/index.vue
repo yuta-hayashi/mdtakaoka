@@ -316,6 +316,7 @@ export default {
   justify-content: center;
   border-right: 1px solid #fff;
   box-sizing: border-box;
+  padding-bottom: 10px;
 }
 .VueCarousel {
   margin: 1em 2em 1em 2em;
