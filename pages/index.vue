@@ -6,7 +6,7 @@
       <h2 class="subtitle">北陸初となるMissionDayが富山県高岡市で開催決定！</h2>
       <h3 id="counter">開催まで、あと{{ days }}日</h3>
     </div>
-    <div class="f-area">
+    <div>
       <carousel
         :perPageCustom="[[320, 1], [768, 2]]"
         :autoplay="true"
@@ -24,10 +24,14 @@
           </d-card>
         </slide>
         <slide>
-          <d-card style="width:310px;">
-            <a href="https://photos.app.goo.gl/QXryWp6oUE1yT4Ro9" target="_blank" rel="noreferrer noopener">
+          <d-card>
+            <a
+              href="https://photos.app.goo.gl/QXryWp6oUE1yT4Ro9"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <d-card-body class="floating">
-                <img src="~/assets/img/g-photos.png" style="width:40px;" />Google Photosで写真を共有
+                <img src="~/assets/img/g-photos.png" style="width:40px;" />GooglePhotos共有アルバム
               </d-card-body>
             </a>
           </d-card>
@@ -313,12 +317,18 @@ export default {
   border-right: 1px solid #fff;
   box-sizing: border-box;
 }
+.VueCarousel {
+  margin: 1em 2em 1em 2em;
+}
 @keyframes flash {
   50% {
     opacity: 0.3;
   }
 }
 @media (max-width: 1170px) {
+  .VueCarousel {
+  margin: 0;
+}
   .f-area {
     justify-content: center;
     padding: 0;
