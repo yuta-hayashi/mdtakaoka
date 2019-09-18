@@ -7,29 +7,38 @@
       <h3 id="counter">開催まで、あと{{ days }}日</h3>
     </div>
     <div class="f-area">
-      <d-card>
-        <n-link to="/qrpass">
-          <d-card-body class="floating">
-            <img src="~/assets/img/ticket-icon.png" style="width:40px;" />
-            <b>QR-PASSの発行はこちら</b>
-            <p>QR-PASSで受付すると<u>特典</u>が貰えます。</p>
-          </d-card-body>
-        </n-link>
-      </d-card>
+      <ul class="horizon-list">
+        <li class="h-item">
+          <d-card>
+            <n-link to="/qrpass">
+              <d-card-body class="floating">
+                <img src="~/assets/img/ticket-icon.png" style="width:40px;" />
+                <b>QR-PASSの発行はこちら</b>
+                <p>
+                  MD高岡限定の
+                  <u>特典</u>が貰えます。
+                </p>
+              </d-card-body>
+            </n-link>
+          </d-card>
+        </li>
 
-      <d-card>
-        <a
-          href="https://photos.app.goo.gl/QXryWp6oUE1yT4Ro9"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <d-card-body class="floating">
-            <img src="~/assets/img/g-photos.png" style="width:40px;" />
-            <b>GooglePhotos共有アルバム</b>
-            <p>誰でも写真の閲覧・追加ができます。</p>
-          </d-card-body>
-        </a>
-      </d-card>
+        <li class="h-item">
+          <d-card>
+            <a
+              href="https://photos.app.goo.gl/QXryWp6oUE1yT4Ro9"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <d-card-body class="floating">
+                <img src="~/assets/img/g-photos.png" style="width:40px;" />
+                <b>GooglePhotos共有アルバム</b>
+                <p>誰でも写真の閲覧・追加ができます。</p>
+              </d-card-body>
+            </a>
+          </d-card>
+        </li>
+      </ul>
     </div>
 
     <div v-for="item in posts" :key="item.sys.id" class="f-area">
@@ -313,6 +322,17 @@ export default {
     opacity: 0.3;
   }
 }
+.horizon-list {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+}
+.h-item {
+  /* 横スクロール用 */
+  display: inline-block;
+  width: auto;
+}
 @media (max-width: 1170px) {
   .VueCarousel {
     margin: 0;
@@ -329,6 +349,9 @@ export default {
   }
   .center {
     text-align: center;
+  }
+  .horizon-list{
+    margin-left: -10px;
   }
 }
 </style>

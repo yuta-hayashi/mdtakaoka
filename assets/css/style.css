@@ -15,9 +15,10 @@
   margin-bottom: 1em;
 }
 
-p{
+p {
   font-weight: 400;
 }
+
 a:hover {
   text-decoration: none !important;
 }
@@ -53,6 +54,24 @@ body {
   -webkit-animation: fadeIn 2s ease 0s 1 normal;
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/*スクロールバーのレール*/
+
+::-webkit-scrollbar-track {
+  border-radius: 30px;
+  background: #eee;
+}
+
+/*スクロールバーのつまみ*/
+
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background:  linear-gradient(45deg, #479ae4 0%, #38af55 100%);
+  box-shadow: inset 2px 2px 2px rgba(255,255,255,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
 @keyframes fadeIn {
   0% {
     opacity: 0
