@@ -89,7 +89,21 @@
           >#mdtakaoka</a>
         </h2>
       </div>
+      <div class="f-area">
+        <d-card class="bottom-card">
+        <d-card-body>
+          <n-link to="/volunteers">
+            <d-card-body class="floating card-text">
+              <p>
+                MissionDay TAKAOKA は多くの協力エージェントによって実現しました🎉
+                <br />こちらよりエージェント名の一覧を閲覧できます。
+              </p>
+            </d-card-body>
+          </n-link>
+        </d-card-body>
+      </d-card>
     </div>
+      </div>
   </div>
 </template>
 
@@ -333,6 +347,13 @@ export default {
   display: inline-block;
   width: auto;
 }
+.bottom-card {
+  max-width: 400px;
+}
+.card-text{
+  padding: 0 !important;
+  text-align: initial;
+}
 @media (max-width: 1170px) {
   .VueCarousel {
     margin: 0;
@@ -350,7 +371,7 @@ export default {
   .center {
     text-align: center;
   }
-  .horizon-list{
+  .horizon-list {
     margin-left: -10px;
   }
 }
