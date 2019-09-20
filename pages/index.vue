@@ -3,8 +3,8 @@
     <h1 hidden>MissionDay 高岡 特設サイト</h1>
     <div id="top" class="bg-back">
       <img src="~/assets/img/logo2.svg" id="logo2" />
-      <h2 class="subtitle">北陸初となるMissionDayが富山県高岡市で開催決定！</h2>
-      <h3 id="counter">開催まで、あと{{ days }}日</h3>
+      <h2 class="subtitle">北陸初となるMissionDayが富山県高岡市で開催！</h2>
+      <h3 id="counter">本日9月21日開催🎉</h3>
     </div>
     <div class="f-area">
       <ul class="horizon-list">
@@ -34,6 +34,21 @@
                 <img src="~/assets/img/g-photos.png" style="width:40px;" />
                 <b>GooglePhotos共有アルバム</b>
                 <p>誰でも写真の閲覧・追加ができます。</p>
+              </d-card-body>
+            </a>
+          </d-card>
+        </li>
+        <li class="h-item">
+          <d-card>
+            <a
+              href="https://twitter.com/search?q=%23mdtakaoka+%23MD%E9%AB%98%E5%B2%A1"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <d-card-body class="floating">
+                <img src="~/assets/img/twitter-icon.png" style="width:40px;" />
+                <b>最新情報はTwitterで</b>
+                <p>ハッシュタグは #mdtakaoka #MD高岡</p>
               </d-card-body>
             </a>
           </d-card>
@@ -91,19 +106,17 @@
       </div>
       <div class="f-area">
         <d-card class="bottom-card">
-        <d-card-body>
-          <n-link to="/volunteers">
-            <d-card-body class="floating card-text">
-              <p>
-                MissionDay TAKAOKA は多くの協力エージェントによって実現しました🎉
-                <br />こちらよりエージェント名の一覧を閲覧できます。
-              </p>
-            </d-card-body>
-          </n-link>
-        </d-card-body>
-      </d-card>
-    </div>
+          <d-card-body>
+            <n-link to="/volunteers">
+              <d-card-body class="floating card-text">
+                  MissionDay TAKAOKA は多くのエージェントの協力によって実現しました🎉
+                  <br />こちらよりエージェント名の一覧を閲覧できます。
+              </d-card-body>
+            </n-link>
+          </d-card-body>
+        </d-card>
       </div>
+    </div>
   </div>
 </template>
 
@@ -333,7 +346,7 @@ export default {
 }
 @keyframes flash {
   50% {
-    opacity: 0.3;
+    opacity: 0.6;
   }
 }
 .horizon-list {
@@ -350,8 +363,9 @@ export default {
 .bottom-card {
   max-width: 400px;
 }
-.card-text{
+.card-text {
   padding: 0 !important;
+  margin: 0;
   text-align: initial;
 }
 @media (max-width: 1170px) {
