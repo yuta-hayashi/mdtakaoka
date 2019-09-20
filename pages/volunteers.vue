@@ -11,15 +11,6 @@
         <li>yachubow</li>
       </ul>
     </div>
-    <h3>寄付者</h3>
-    <div class="list">
-      <ul>
-        <li>itasenpars</li>
-        <li>gearblues</li>
-        <li>sakakiparano</li>
-        <li>調整中…</li>
-      </ul>
-    </div>
     <h3>STAFF</h3>
     <div class="list">
       <ul>
@@ -57,6 +48,38 @@
         <li>torimomo1999</li>
         <li>VTR1000FFS</li>
         <li>YutaKun5</li>
+        <li>ZebraSonicKP</li>
+        <li>zola006</li>
+      </ul>
+    </div>
+    <h3>寄付者</h3>
+    <div class="list">
+      <ul>
+        <li>itasenpars</li>
+        <li>00halt00</li>
+        <li>deffLynx</li>
+        <li>fleece01</li>
+        <li>Fusetsu</li>
+        <li>gearblues</li>
+        <li>ibuki0402</li>
+        <li>ken002</li>
+        <li>kiyoharu5966</li>
+        <li>mack54</li>
+        <li>MDUC</li>
+        <li>miinchin001</li>
+        <li>MIUK8877</li>
+        <li>negikarubi</li>
+        <li>noranekoinko</li>
+        <li>opaopa620</li>
+        <li>Rikukami</li>
+        <li>RVF400</li>
+        <li>sakakiparano</li>
+        <li>sasaken7796</li>
+        <li>sitamo88</li>
+        <li>SkyStarSapphire</li>
+        <li>tomoemonn</li>
+        <li>VTR1000FFS</li>
+        <li>yachubow</li>
         <li>ZebraSonicKP</li>
         <li>zola006</li>
       </ul>
