@@ -11,6 +11,15 @@
         <li>yachubow</li>
       </ul>
     </div>
+    <h3>寄付者</h3>
+    <div class="list">
+      <ul>
+        <li>itasenpars</li>
+        <li>gearblues</li>
+        <li>sakakiparano</li>
+        <li>調整中…</li>
+      </ul>
+    </div>
     <h3>STAFF</h3>
     <div class="list">
       <ul>
