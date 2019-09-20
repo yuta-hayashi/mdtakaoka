@@ -91,26 +91,24 @@
       <br />
       <p>SNSではハッシュタグをご利用ください！</p>
       <div class="hasharea">
-        <h2 class="hashtag bg-back">
-          <a
-            href="https://twitter.com/search?q=%23md高岡"
-            target="_blank"
-            rel="noreferrer noopener"
-          >#MD高岡</a>&nbsp;
-          <a
-            href="https://twitter.com/search?q=%23mdtakaoka"
-            target="_blank"
-            rel="noreferrer noopener"
-          >#mdtakaoka</a>
-        </h2>
+        <a
+          href="https://twitter.com/search?q=%23mdtakaoka+%23MD%E9%AB%98%E5%B2%A1"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <h2 class="hashtag bg-back">
+            #MD高岡&nbsp;
+            #mdtakaoka
+          </h2>
+        </a>
       </div>
       <div class="f-area">
         <d-card class="bottom-card">
           <d-card-body>
             <n-link to="/volunteers">
               <d-card-body class="floating card-text">
-                  MissionDay TAKAOKA は多くのエージェントの協力によって実現しました🎉
-                  <br />こちらよりエージェント名の一覧を閲覧できます。
+                MissionDay TAKAOKA は多くのエージェントの協力によって実現しました🎉
+                <br />こちらよりエージェント名の一覧を閲覧できます。
               </d-card-body>
             </n-link>
           </d-card-body>
@@ -233,7 +231,7 @@ export default {
   font-size: 2em;
   border-radius: 0.2em;
 }
-.hashtag a {
+.hashtag {
   color: white;
 }
 .subtitle {
