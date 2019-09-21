@@ -304,6 +304,7 @@ export default {
   display: inline;
   padding: 5px;
   color: white;
+  font-size: 1em;
 }
 #counter {
   /*border: solid white;
