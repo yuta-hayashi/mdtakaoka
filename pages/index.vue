@@ -4,7 +4,7 @@
     <div id="top" class="bg-back">
       <img src="~/assets/img/logo2.svg" id="logo2" />
       <h2 class="subtitle">北陸初となるMissionDayが富山県高岡市で開催！</h2>
-      <h3 id="counter">本日9月21日開催🎉</h3>
+      <h3 id="counter">終了しました。<br><u>684名</u>のエージェントの皆さんにご参加いただきました。<br>ありがとうございました。</h3>
     </div>
     <div class="f-area">
       <ul class="horizon-list">
@@ -306,9 +306,9 @@ export default {
   color: white;
 }
 #counter {
-  border: solid white;
+  /*border: solid white;
   animation: flash 2s ease infinite;
-  font-size: 1.5em;
+  font-size: 1.5em;*/
 }
 .navBotton {
   padding: 10px;
