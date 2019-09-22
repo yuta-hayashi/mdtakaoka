@@ -17,17 +17,20 @@
         <li>00halt00</li>
         <li>8atyuc4</li>
         <li>aisakura0193</li>
+        <li>BIG1NOSUKE</li>
         <li>chicken77777</li>
         <li>chinjaomin</li>
         <li>chintan0909</li>
         <li>deffLynx</li>
         <li>dosintan</li>
         <li>Fusetsu</li>
+        <li>gobaku1984</li>
         <li>hacchi29</li>
         <li>Hawksan</li>
         <li>ibuki0402</li>
         <li>ken002</li>
         <li>kiyoharu5966</li>
+        <li>kohukohu</li>
         <li>mack54</li>
         <li>MDUC</li>
         <li>miinchin001</li>
@@ -89,6 +92,7 @@
         <li>zola006</li>
       </ul>
     </div>
+    <small>本ページ公開当初に記入漏れがありました。<br>お詫びして訂正します。</small>
   </div>
 </template>
 <style scoped>
