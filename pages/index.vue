@@ -28,6 +28,22 @@
           </d-card>
         </li>
 
+         <li class="h-item">
+          <d-card>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfIAJy9jtnAZSwYf8IJ6sBq0TA-mNgTFAo9lvE_3rIaisJJNA/viewform"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <d-card-body class="floating">
+                <img src="~/assets/img/forms.png" style="width:40px;" />
+                <b>MDに関するアンケート</b>
+                <p>参加してくださったAGの方はご協力お願いします。</p>
+              </d-card-body>
+            </a>
+          </d-card>
+        </li>
+
         <li class="h-item">
           <d-card>
             <a
