@@ -66,7 +66,7 @@
         <li>Fusetsu</li>
         <li>gearblues</li>
         <li>ibuki0402</li>
-        <li>itasenpars</li>
+        <li>itasenparas</li>
         <li>ken002</li>
         <li>kiyoharu5966</li>
         <li>mack54</li>
