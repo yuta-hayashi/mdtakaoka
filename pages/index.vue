@@ -4,19 +4,24 @@
     <div id="top" class="bg-back">
       <img src="~/assets/img/logo2.svg" id="logo2" />
       <h2 class="subtitle">北陸初となるMissionDayが富山県高岡市で開催！</h2>
-      <h3 id="counter">終了しました。<br><u>684名</u>のエージェントの皆さんにご参加いただきました。<br>ありがとうございました。</h3>
+      <h3 id="counter">
+        終了しました。
+        <br />
+        <u>684名</u>のエージェントの皆さんにご参加いただきました。
+        <br />ありがとうございました。
+      </h3>
     </div>
     <div class="f-area">
       <ul class="horizon-list">
+
         <li class="h-item">
           <d-card>
-            <n-link to="/qrpass">
+            <n-link to="/volunteers">
               <d-card-body class="floating">
-                <img src="~/assets/img/ticket-icon.png" style="width:40px;" />
-                <b>QR-PASSの発行はこちら</b>
                 <p>
-                  MD高岡限定の
-                  <u>特典</u>が貰えます。
+                  MissionDay TAKAOKA は多くのエージェントの
+                  <br />協力によって実現しました🎉
+                  <br />こちらよりエージェント名の一覧を閲覧できます。
                 </p>
               </d-card-body>
             </n-link>
@@ -51,6 +56,20 @@
                 <p>ハッシュタグは #mdtakaoka #MD高岡</p>
               </d-card-body>
             </a>
+          </d-card>
+        </li>
+        <li class="h-item">
+          <d-card>
+            <n-link to="/qrpass">
+              <d-card-body class="floating">
+                <img src="~/assets/img/ticket-icon.png" style="width:40px;" />
+                <b>QR-PASSの発行はこちら</b>
+                <p>
+                  MD高岡限定の
+                  <u>特典</u>が貰えます。
+                </p>
+              </d-card-body>
+            </n-link>
           </d-card>
         </li>
       </ul>
@@ -101,18 +120,6 @@
             #mdtakaoka
           </h2>
         </a>
-      </div>
-      <div class="f-area">
-        <d-card class="bottom-card">
-          <d-card-body>
-            <n-link to="/volunteers">
-              <d-card-body class="floating card-text">
-                MissionDay TAKAOKA は多くのエージェントの協力によって実現しました🎉
-                <br />こちらよりエージェント名の一覧を閲覧できます。
-              </d-card-body>
-            </n-link>
-          </d-card-body>
-        </d-card>
       </div>
     </div>
   </div>
