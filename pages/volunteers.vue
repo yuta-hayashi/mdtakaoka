@@ -17,6 +17,7 @@
         <li>00halt00</li>
         <li>8atyuc4</li>
         <li>aisakura0193</li>
+        <li>chicken77777</li>
         <li>chinjaomin</li>
         <li>chintan0909</li>
         <li>deffLynx</li>
@@ -34,6 +35,7 @@
         <li>negikarubi</li>
         <li>noranekoinko</li>
         <li>PAC3</li>
+        <li>PrettyUcccchy</li>
         <li>Rh1z0We</li>
         <li>Rikukami</li>
         <li>rk1917</li>
@@ -47,6 +49,7 @@
         <li>tomoemonn</li>
         <li>torimomo1999</li>
         <li>VTR1000FFS</li>
+        <li>yukikaeru</li>
         <li>YutaKun5</li>
         <li>ZebraSonicKP</li>
         <li>zola006</li>
