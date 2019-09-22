@@ -55,13 +55,13 @@
     <h3>寄付者</h3>
     <div class="list">
       <ul>
-        <li>itasenpars</li>
         <li>00halt00</li>
         <li>deffLynx</li>
         <li>fleece01</li>
         <li>Fusetsu</li>
         <li>gearblues</li>
         <li>ibuki0402</li>
+        <li>itasenpars</li>
         <li>ken002</li>
         <li>kiyoharu5966</li>
         <li>mack54</li>
@@ -73,7 +73,6 @@
         <li>noranekoinko</li>
         <li>opaopa620</li>
         <li>Rikukami</li>
-        <li>RVF400</li>
         <li>sakakiparano</li>
         <li>sasaken7796</li>
         <li>sitamo88</li>
