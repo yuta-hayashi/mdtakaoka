@@ -32,6 +32,7 @@
         <li>MDUC</li>
         <li>miinchin001</li>
         <li>MIUK8877</li>
+        <li>miyatayasu</li>
         <li>negikarubi</li>
         <li>noranekoinko</li>
         <li>PAC3</li>
@@ -49,6 +50,7 @@
         <li>tomoemonn</li>
         <li>torimomo1999</li>
         <li>VTR1000FFS</li>
+        <li>yoppy0728</li>
         <li>yukikaeru</li>
         <li>YutaKun5</li>
         <li>ZebraSonicKP</li>
