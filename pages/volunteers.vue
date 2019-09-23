@@ -50,6 +50,7 @@
         <li>sigsig33e3</li>
         <li>SkyStarSapphire</li>
         <li>thedubmancer</li>
+        <li>tomo422</li>
         <li>tomoemonn</li>
         <li>torimomo1999</li>
         <li>VTR1000FFS</li>
@@ -92,7 +93,10 @@
         <li>zola006</li>
       </ul>
     </div>
-    <small>本ページ公開当初に記入漏れがありました。<br>お詫びして訂正します。</small>
+    <small>
+      本ページ公開当初に記入漏れがありました。
+      <br />お詫びして訂正します。
+    </small>
   </div>
 </template>
 <style scoped>
