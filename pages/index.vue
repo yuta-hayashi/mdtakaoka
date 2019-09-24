@@ -26,7 +26,7 @@
                 <p>
                   MissionDay TAKAOKA は多くのエージェントの
                   <br />協力によって実現しました🎉
-                  <br />こちらよりエージェント名の一覧を閲覧できます。
+                  <br />エージェント名の一覧はこちら
                 </p>
               </d-card-body>
             </n-link>
@@ -73,7 +73,7 @@
             >
               <d-card-body class="floating">
                 <img src="~/assets/img/twitter-icon.png" style="width:40px;" />
-                <b>最新情報はTwitterで</b>
+                <b>思い出情報はTwitterで</b>
                 <p>ハッシュタグは #mdtakaoka #MD高岡</p>
               </d-card-body>
             </a>
