@@ -9,7 +9,12 @@
         <br />
         <u>684名</u>のエージェントの皆さんにご参加いただきました。
         <br />ありがとうございました。
-      </h3>
+      </h3><br/>
+       <a style="color:white;font-weight:500;"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfIAJy9jtnAZSwYf8IJ6sBq0TA-mNgTFAo9lvE_3rIaisJJNA/viewform"
+              target="_blank"
+              rel="noreferrer noopener"
+            >参加してくださった方は<u>アンケート</u>にご協力お願いします。</a>
     </div>
     <div class="f-area">
       <ul class="horizon-list">
