@@ -43,7 +43,6 @@
         <li>Rh1z0We</li>
         <li>Rikukami</li>
         <li>rk1917</li>
-        <li>RVF400</li>
         <li>sakurapzero</li>
         <li>sasaken7796</li>
         <li>sat2015</li>
