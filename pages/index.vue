@@ -9,16 +9,20 @@
         <br />
         <u>684名</u>のエージェントの皆さんにご参加いただきました。
         <br />ありがとうございました。
-      </h3><br/>
-       <a style="color:white;font-weight:500;"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfIAJy9jtnAZSwYf8IJ6sBq0TA-mNgTFAo9lvE_3rIaisJJNA/viewform"
-              target="_blank"
-              rel="noreferrer noopener"
-            >参加してくださった方は<u>アンケート</u>にご協力お願いします。</a>
+      </h3>
+      <br />
+      <a
+        style="color:white;font-weight:500;"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfIAJy9jtnAZSwYf8IJ6sBq0TA-mNgTFAo9lvE_3rIaisJJNA/viewform"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        参加してくださった方は
+        <u>アンケート</u>にご協力お願いします。
+      </a>
     </div>
     <div class="f-area">
       <ul class="horizon-list">
-
         <li class="h-item">
           <d-card>
             <n-link to="/volunteers">
@@ -33,7 +37,7 @@
           </d-card>
         </li>
 
-         <li class="h-item">
+        <li class="h-item">
           <d-card>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSfIAJy9jtnAZSwYf8IJ6sBq0TA-mNgTFAo9lvE_3rIaisJJNA/viewform"
@@ -333,8 +337,6 @@ export default {
   padding: 5px;
   color: white;
   font-size: 1em;
-}
-#counter {
   /*border: solid white;
   animation: flash 2s ease infinite;
   font-size: 1.5em;*/
