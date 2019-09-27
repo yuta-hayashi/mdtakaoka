@@ -1,6 +1,13 @@
 # mdtakaoka
 
-> My magnificent Nuxt.js project
+MissionDay高岡のウェブサイトのリポジトリです。  
+**https://mdtakaoka.info**
+
+Qiita書きました。  
+https://qiita.com/HYuta999/items/a703782c2a4f853e1495
+
+ContentfulのAPIキーが書いてある`.env`ファイルがないと記事が表示されません。
+
 
 ## Build Setup
 
