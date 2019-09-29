@@ -136,7 +136,7 @@
       <p>SNSではハッシュタグをご利用ください！</p>
       <div class="hasharea">
         <a
-          href="https://twitter.com/search?q=%23mdtakaoka+%23MD%E9%AB%98%E5%B2%A1"
+          href="https://twitter.com/search?q=%23mdtakaoka%20OR%20%23MD%E9%AB%98%E5%B2%A1&src=typed_query"
           target="_blank"
           rel="noreferrer noopener"
         >
