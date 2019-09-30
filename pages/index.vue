@@ -7,19 +7,9 @@
       <h3 id="counter">
         終了しました。
         <br />
-        <u>684名</u>のエージェントの皆さんにご参加いただきました。
+        <u>686名</u>のエージェントの皆さんにご参加いただきました。
         <br />ありがとうございました。
       </h3>
-      <br />
-      <a
-        style="color:white;font-weight:500;"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfIAJy9jtnAZSwYf8IJ6sBq0TA-mNgTFAo9lvE_3rIaisJJNA/viewform"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        参加してくださった方は
-        <u>アンケート</u>にご協力お願いします。
-      </a>
     </div>
     <div class="f-area">
       <ul class="horizon-list">
@@ -34,22 +24,6 @@
                 </p>
               </d-card-body>
             </n-link>
-          </d-card>
-        </li>
-
-        <li class="h-item">
-          <d-card>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfIAJy9jtnAZSwYf8IJ6sBq0TA-mNgTFAo9lvE_3rIaisJJNA/viewform"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <d-card-body class="floating">
-                <img src="~/assets/img/forms.png" style="width:40px;" />
-                <b>MDに関するアンケート</b>
-                <p>参加してくださったAGの方はご協力お願いします。</p>
-              </d-card-body>
-            </a>
           </d-card>
         </li>
 
