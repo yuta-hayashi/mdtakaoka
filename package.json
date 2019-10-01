@@ -11,23 +11,23 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@contentful/rich-text-html-renderer": "^13.1.0",
-    "@nuxtjs/axios": "^5.3.6",
+    "@contentful/rich-text-html-renderer": "^13.4.0",
+    "@nuxtjs/axios": "^5.6.0",
     "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/pwa": "^2.6.0",
-    "contentful": "^7.8.1",
-    "contentful-management": "^5.9.0",
-    "dotenv": "^8.0.0",
+    "contentful": "^7.10.0",
+    "contentful-management": "^5.11.2",
+    "dotenv": "^8.1.0",
     "moment": "^2.24.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.9.2",
     "nuxt-webfontloader": "^1.1.0",
     "qrcanvas-vue": "^2.0.3",
-    "qrcode.vue": "^1.6.2",
+    "qrcode.vue": "^1.6.3",
     "shards-vue": "^1.0.7",
     "vue-carousel": "^0.18.0",
-    "vue-html-to-paper": "^1.1.0"
+    "vue-html-to-paper": "^1.1.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.19.3"
   }
 }
