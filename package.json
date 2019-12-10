@@ -12,22 +12,22 @@
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^13.4.0",
-    "@nuxtjs/axios": "^5.6.0",
-    "@nuxtjs/google-analytics": "^2.2.0",
+    "@nuxtjs/axios": "^5.8.0",
+    "@nuxtjs/google-analytics": "^2.2.2",
     "@nuxtjs/pwa": "^2.6.0",
     "contentful": "^7.10.0",
-    "contentful-management": "^5.11.2",
-    "dotenv": "^8.1.0",
+    "contentful-management": "^5.12.0",
+    "dotenv": "^8.2.0",
     "moment": "^2.24.0",
-    "nuxt": "^2.9.2",
+    "nuxt": "^2.10.2",
     "nuxt-webfontloader": "^1.1.0",
     "qrcanvas-vue": "^2.0.3",
-    "qrcode.vue": "^1.6.3",
+    "qrcode.vue": "^1.7.0",
     "shards-vue": "^1.0.7",
     "vue-carousel": "^0.18.0",
     "vue-html-to-paper": "^1.1.1"
   },
   "devDependencies": {
-    "nodemon": "^1.19.3"
+    "nodemon": "^1.19.4"
   }
 }
