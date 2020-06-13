@@ -7,4 +7,4 @@ status = 200
 from = "https://mdtakaoka.info/*"
 to = "mdtakaoka.yuta.run/"
 status = 301
-force==true
+force = true
