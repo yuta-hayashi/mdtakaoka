@@ -1,5 +1,8 @@
 <template>
   <div class="content">
+    <p class="message">
+      このサイトはmdtakaoka.infoのドメインが失効したため、mdtakaoka.yuta.runでアーカイブされています。
+    </p>
     <h1 hidden>MissionDay 高岡 特設サイト</h1>
     <div id="top" class="bg-back">
       <img src="~/assets/img/logo2.svg" id="logo2" />
@@ -76,10 +79,13 @@
 
     <div v-for="item in posts" :key="item.sys.id" class="f-area">
       <div class="f-content center">
-        <img :src="item.fields.cover.fields.file.url+'?fm=jpg&q=80'" class="f-img" />
+        <img
+          :src="item.fields.cover.fields.file.url + '?fm=jpg&q=80'"
+          class="f-img"
+        />
       </div>
       <div class="f-content">
-        <h2 class="center title">{{item.fields.title}}</h2>
+        <h2 class="center title">{{ item.fields.title }}</h2>
         <div v-html="item.fields.content" class="post"></div>
       </div>
     </div>
@@ -98,13 +104,15 @@
           class="navBotton active"
           target="_blank"
           rel="noreferrer noopener"
-        >Twitterアカウント</a>
+          >Twitterアカウント</a
+        >
         <a
           href="https://t.me/joinchat/AAAAAFQj7GWHVx469bwPLA"
           class="navBotton active"
           target="_blank"
           rel="noreferrer noopener"
-        >Telegramチャネル</a>
+          >Telegramチャネル</a
+        >
       </div>
       <br />
       <p>SNSではハッシュタグをご利用ください！</p>
@@ -115,8 +123,7 @@
           rel="noreferrer noopener"
         >
           <h2 class="hashtag bg-back">
-            #MD高岡&nbsp;
-            #mdtakaoka
+            #MD高岡&nbsp; #mdtakaoka
           </h2>
         </a>
       </div>
@@ -137,7 +144,7 @@ const options = {
       `<a href=${
         node.data.uri
       } target="_blank" rel="noreferrer noopener">${next(node.content)}</a>`,
-    [BLOCKS.EMBEDDED_ASSET]: node =>
+    [BLOCKS.EMBEDDED_ASSET]: (node) =>
       `<img src="${node.data.target.fields.file.url +
         "?fm=jpg&q=50"}" class="post-img"/>`
   }
@@ -217,6 +224,13 @@ export default {
 </script>
 
 <style scoped>
+.message {
+  top: 0;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  background: #35495e;
+}
 #top {
   text-align: center;
   padding: 2em;
