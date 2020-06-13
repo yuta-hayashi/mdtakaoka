@@ -2,3 +2,9 @@
 from = "/*"
 to = "/index.html"
 status = 200
+
+[[redirects]]
+from = "https://mdtakaoka.info/*"
+to = "mdtakaoka.yuta.run/"
+status = 301
+force==true
