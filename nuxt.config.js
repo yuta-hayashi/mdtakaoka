@@ -94,12 +94,8 @@ export default {
         .then(entries => {
           return [...entries.items.map(entry => `/spot/${entry.sys.id}`)]
         });
-      let missionRoute = cdaClient.getEntries({ content_type: 'mission' })
-        .then(entries => {
-          return [...entries.items.map(entry => `/mission/${entry.sys.id}`)]
-        });
       let error = '/error';
-      return Promise.all([postRoute, missionRoute, error]).then(values => {
+      return Promise.all([postRoute, error]).then(values => {
         return values.join().split(',');
       })
     }
