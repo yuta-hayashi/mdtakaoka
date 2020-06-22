@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "nuxt --hostname 0.0.0.0 --port 3000",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "start": "nuxt serve",
+    "generate": "nuxt build --target static&& nuxt export"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^13.4.0",
@@ -19,7 +19,7 @@
     "contentful-management": "^5.12.0",
     "dotenv": "^8.2.0",
     "moment": "^2.24.0",
-    "nuxt": "^2.12.2",
+    "nuxt": "^2.13.0",
     "nuxt-webfontloader": "^1.1.0",
     "qrcanvas-vue": "^2.0.3",
     "qrcode.vue": "^1.7.0",
